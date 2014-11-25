@@ -20,7 +20,7 @@ return 0;
 void NumeroRigheEColonneMatrice()
 {
 int i = RIGHE - 1;
-int j = COLONNE - 1;
+int j = COLONNE - 2;
 
 printf("Programma di calcolo per una Matrice Trasposta\n\n");
 printf("===========================================================================\n");
@@ -51,10 +51,10 @@ int i = 0;
 int j = 0;
 
 printf("Adesso inserire i dati della Matrice:\n");
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
         {
             j = 0;
-            while(j < matrice[RIGHE - 1][COLONNE])
+            while(j < matrice[RIGHE - 1][COLONNE - 1])
                 {
                 printf("Inserire il numero in posizione Riga: ");
                 printf("%d", i + 1);
@@ -78,10 +78,10 @@ int j = 0;
 printf("\n===========================================================================\n");
 printf("Ecco la tua matrice trasposta\n");
 j = 0;
-while(j < matrice[RIGHE - 1][COLONNE])
+while(j < matrice[RIGHE - 1][COLONNE - 1])
     {
         i = 0;
-        while(i < matrice[RIGHE - 1][COLONNE - 1])
+        while(i < matrice[RIGHE - 1][COLONNE - 2])
                 {
                 printf("%.2f\t", matrice[i][j]);
                 i = i + 1;
