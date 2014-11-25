@@ -26,7 +26,7 @@ return 0;
 void NumeroRigheEColonneMatrice()
 {
 int i = RIGHE - 1;
-int j = COLONNE - 1;
+int j = COLONNE - 2;
 
 printf("Programma di calcolo per Prodotto tra due Matrici\n\n");
 printf("===========================================================================\n");
@@ -51,7 +51,7 @@ printf("========================================================================
         }
 
 i = RIGHE - 1;
-j = COLONNE - 1;
+j = COLONNE - 2;
     printf("===========================================================================\n");
     printf("Adesso inserire il numero di Righe di cui è composta la Matrice da Moltiplicare: ");
     printf("===========================================================================\n");
@@ -73,7 +73,7 @@ j = COLONNE - 1;
         scanf("%f", &matrice2[i][j]);
         }
 
-if(matrice[RIGHE - 1][COLONNE] != matrice2[RIGHE - 1][COLONNE - 1])
+if(matrice[RIGHE - 1][COLONNE - 1] != matrice2[RIGHE - 1][COLONNE - 2])
       {
        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
        printf("Per moltiplicare 2 matrici, le righe della matrice moltiplicare devono essere pari alle colonne della matrice moltiplicante, premere un tasto per tornare alla schermata di selezione");
@@ -92,10 +92,10 @@ int i = 0;
 int j = 0;
 
 printf("Adesso inserire i dati della Prima Matrice:\n");
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice[RIGHE - 1][COLONNE])
+        while(j < matrice[RIGHE - 1][COLONNE - 1])
         {
             printf("Inserire il numero in posizione Riga: ");
             printf("%d", i + 1);
@@ -111,10 +111,10 @@ printf("\n======================================================================
     i = 0;
     j = 0;
 printf("Adesso inserire i dati della Seconda Matrice:\n");
-while(i < matrice2[RIGHE - 1][COLONNE - 1])
+while(i < matrice2[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice2[RIGHE - 1][COLONNE])
+        while(j < matrice2[RIGHE - 1][COLONNE - 1])
         {
             printf("Inserire il numero in posizione Riga: ");
             printf("%d", i + 1);
@@ -136,13 +136,13 @@ int j = 0;
 int c = 0;
 float risulta[RIGHE] = {0};
 
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice[RIGHE - 1][COLONNE])
+        while(j < matrice[RIGHE - 1][COLONNE - 1])
         {
             c = 0;
-            while(c < matrice[RIGHE - 1][COLONNE])
+            while(c < matrice[RIGHE - 1][COLONNE - 1])
             {
             risulta[c] = matrice[i][c] * matrice2[c][j];
             matrice3[i][j] = matrice3[i][j] + risulta[c];
@@ -163,10 +163,10 @@ int j = 0;
 
 printf("\n===========================================================================\n");
 printf("Il prodotto delle due matrici e' :\n");
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice[RIGHE - 1][COLONNE])
+        while(j < matrice[RIGHE - 1][COLONNE - 1])
         {
             printf("%.2f\t", matrice3[i][j]);
             j = j + 1;
