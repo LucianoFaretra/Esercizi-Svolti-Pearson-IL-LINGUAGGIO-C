@@ -23,7 +23,7 @@ return 0;
 void NumeroRigheEColonneMatrice()
 {
 int i = RIGHE - 1;
-int j = COLONNE - 1;
+int j = COLONNE - 2;
 
 printf("Programma di calcolo per la Somma di due Matrici\n\n");
 printf("===========================================================================\n");
@@ -54,10 +54,10 @@ int i = 0;
 int j = 0;
 
 printf("Adesso inserire i dati della Prima Matrice:\n");
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
         {
             j = 0;
-            while(j < matrice[RIGHE - 1][COLONNE])
+            while(j < matrice[RIGHE - 1][COLONNE - 1])
                 {
                 printf("Inserire il numero in posizione Riga: ");
                 printf("%d", i + 1);
@@ -73,10 +73,10 @@ printf("\n======================================================================
 i = 0;
 j = 0;
 printf("Adesso inserire i dati della Seconda Matrice:\n");
-    while(i < matrice[RIGHE - 1][COLONNE - 1])
+    while(i < matrice[RIGHE - 1][COLONNE - 2])
         {
             j = 0;
-            while(j < matrice[RIGHE - 1][COLONNE])
+            while(j < matrice[RIGHE - 1][COLONNE - 1])
                 {
                 printf("Inserire il numero in posizione Riga: ");
                 printf("%d", i + 1);
@@ -96,10 +96,10 @@ void CalcoloMatrice()
 int i = 0;
 int j = 0;
 
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice[RIGHE - 1][COLONNE])
+        while(j < matrice[RIGHE - 1][COLONNE - 1])
         {
             matrice[i][j] = matrice[i][j] + matrice2[i][j];
             j = j + 1;
@@ -116,10 +116,10 @@ int j = 0;
 
 printf("\n===========================================================================\n");
 printf("La somma delle due Matrici e' :\n");
-while(i < matrice[RIGHE - 1][COLONNE - 1])
+while(i < matrice[RIGHE - 1][COLONNE - 2])
     {
         j = 0;
-        while(j < matrice[RIGHE - 1][COLONNE])
+        while(j < matrice[RIGHE - 1][COLONNE - 1])
         {
             printf("%.2f\t", matrice[i][j]);
             j = j + 1;
