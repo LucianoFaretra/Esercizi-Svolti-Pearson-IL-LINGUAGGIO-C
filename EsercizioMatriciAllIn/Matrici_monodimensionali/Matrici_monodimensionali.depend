@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1417176204 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/Matrici_monodimensionali/main.c
+	<stdio.h>
+	<stdlib.h>
+	"input.h"
+
+1417176264 /home/ibanez89/UniBa/EsercizioMatriciAllIn/Matrici_monodimensionali/input.h
+
+1417176328 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/Matrici_monodimensionali/input.c
+	<stdlib.h>
+	<stdio.h>
+	"input.h"
+
