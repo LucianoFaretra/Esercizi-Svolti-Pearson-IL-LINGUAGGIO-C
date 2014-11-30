@@ -5,7 +5,6 @@
 #include "CalcoloSommaDueMatrici.h"
 #include "MatriceSomma.h"
 #include "InserimentoElementiMatrice.h"
-#include "ControlloVincoloSommaDueMatrici.h"
 
 void MatriceSomma(float matrice[], float matrice2[], float matrice3[])
 {

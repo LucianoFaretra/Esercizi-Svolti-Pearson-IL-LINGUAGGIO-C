@@ -3,6 +3,8 @@
 
 #include "MatriceMoltiplicazione.h"
 #include "MatriceSomma.h"
+#include "ProdottoScalare.h"
+
 #include "StampaMatriceRisulta.h"
 
 
@@ -14,8 +16,9 @@ float matrice[DIM] = {0};
 float matrice2[DIM] = {0};
 float matrice3[DIM] = {0};
 
-MatriceMoltiplicazione(matrice, matrice2, matrice3);
+//MatriceMoltiplicazione(matrice, matrice2, matrice3);
 //MatriceSomma(matrice, matrice2, matrice3);
+ProdottoScalare(matrice, matrice3);
 
 StampaMatriceRisulta(matrice3);
 return 0;
