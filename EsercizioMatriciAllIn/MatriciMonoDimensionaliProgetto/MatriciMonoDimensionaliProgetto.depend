@@ -18,12 +18,13 @@
 
 1417291570 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/input.h
 
-1417368310 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/main.c
+1417374454 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/main.c
 	<stdlib.h>
 	<stdio.h>
 	"MatriceMoltiplicazione.h"
 	"MatriceSomma.h"
 	"ProdottoScalare.h"
+	"MatriceTrasposta.h"
 	"StampaMatriceRisulta.h"
 
 1417290315 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceMoltiplicazione.h
