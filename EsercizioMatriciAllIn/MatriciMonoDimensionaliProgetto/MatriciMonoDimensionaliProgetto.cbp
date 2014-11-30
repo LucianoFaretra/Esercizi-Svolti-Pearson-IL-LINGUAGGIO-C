@@ -31,6 +31,27 @@
 		<Compiler>
 			<Add option="-Weverything" />
 		</Compiler>
+		<Unit filename="CalcoloProdottoDueMatrici.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CalcoloProdottoDueMatrici.h" />
+		<Unit filename="InserimentoElementiMatrice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="InserimentoElementiMatrice.h" />
+		<Unit filename="MatriceMoltiplicazione.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MatriceMoltiplicazione.h" />
+		<Unit filename="Output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Output.h" />
+		<Unit filename="globale.h" />
+		<Unit filename="input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="input.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

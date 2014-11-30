@@ -1,1 +1,1 @@
-void MatriceMoltiplicazione(void);
+void MatriceMoltiplicazione(float matrice[], float matrice2[], float matrice3[]);
