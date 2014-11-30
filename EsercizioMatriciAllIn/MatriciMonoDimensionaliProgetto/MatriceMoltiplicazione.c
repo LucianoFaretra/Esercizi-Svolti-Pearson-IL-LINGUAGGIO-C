@@ -5,30 +5,31 @@
 #include "CalcoloProdottoDueMatrici.h"
 #include "MatriceMoltiplicazione.h"
 #include "InserimentoElementiMatrice.h"
-#include "ControlloVincoloProdottoDueMatrici.h"
 
 void MatriceMoltiplicazione(float matrice[], float matrice2[], float matrice3[])
 {
 
 int n = 0;
 
+while((int)matrice[1] != (int)matrice2[0] || ((int)matrice[0] == 0 || (int)matrice2[0] == 0) || ((int)matrice[1] == 0 || (int)matrice2[1] == 0))
+      {
+       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
+       printf("Per sommare 2 matrici, il numero di righe e colonne di entrambe le Matrici devono essere di ugual numero, prego reinserire i dati. ");
+       printf("\n==============================ATTENZIONE==================================\n\n\n\n\n\n");
 /* INIZIO BLOCCO DI INPUT*/
-n = 1;//Prima Matrice
+       n = 1;//Prima Matrice
 
-InserimentoNumeroRighe(matrice, n);
-InserimentoNumeroColonne(matrice);
-ControlloMatrice(matrice, n);
+        InserimentoNumeroRighe(matrice, n);
+        InserimentoNumeroColonne(matrice);
+        ControlloMatrice(matrice, n);
 
-n = 2;//Seconda Matrice
+        n = 2;//Seconda Matrice
 
-InserimentoNumeroRighe(matrice2, n);
-InserimentoNumeroColonne(matrice2);
-ControlloMatrice(matrice2, n);
+        InserimentoNumeroRighe(matrice2, n);
+        InserimentoNumeroColonne(matrice2);
+        ControlloMatrice(matrice2, n);
 /* FINE BLOCCO DI INPUT*/
-
-/* INIZIO BLOCCO CONTROLLO VINCOLO PRODOTTO DUE MATRICI*/
-ControlloVincoloProdottoDueMatrici(matrice, matrice2, matrice3);
-/* FINE BLOCCO CONTROLLO VINCOLO PRODOTTO DUE MATRICI*/
+      }
 
 /* INIZIO BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 n = 1;//Prima Matrice
