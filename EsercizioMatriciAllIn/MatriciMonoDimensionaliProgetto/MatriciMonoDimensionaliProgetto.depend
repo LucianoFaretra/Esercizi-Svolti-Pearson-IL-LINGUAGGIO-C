@@ -18,11 +18,12 @@
 
 1417291570 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/input.h
 
-1417365691 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/main.c
+1417368310 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/main.c
 	<stdlib.h>
 	<stdio.h>
 	"MatriceMoltiplicazione.h"
 	"MatriceSomma.h"
+	"ProdottoScalare.h"
 	"StampaMatriceRisulta.h"
 
 1417290315 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceMoltiplicazione.h
@@ -39,14 +40,13 @@
 
 1417289889 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/InserimentoElementiMatrici.h
 
-1417365606 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceMoltiplicazione.c
+1417365949 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceMoltiplicazione.c
 	<stdlib.h>
 	<stdio.h>
 	"InserimentoRigheEColonne.h"
 	"CalcoloProdottoDueMatrici.h"
 	"MatriceMoltiplicazione.h"
 	"InserimentoElementiMatrice.h"
-	"ControlloVincoloProdottoDueMatrici.h"
 
 1417280419 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/CalcoloProdottoDueMatrici.h
 
@@ -91,14 +91,13 @@
 	<stdio.h>
 	"CalcoloSommaDueMatrici.h"
 
-1417365625 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceSomma.c
+1417367998 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceSomma.c
 	<stdlib.h>
 	<stdio.h>
 	"InserimentoRigheEColonne.h"
 	"CalcoloSommaDueMatrici.h"
 	"MatriceSomma.h"
 	"InserimentoElementiMatrice.h"
-	"ControlloVincoloSommaDueMatrici.h"
 
 1417354103 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceSomma.h
 
@@ -111,4 +110,37 @@
 	"MatriceSomma.h"
 
 1417360536 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/ControlloVincoloSommaDueMatrici.h
+
+1417368191 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/CalcoloProdottoScalare.c
+	<stdlib.h>
+	<stdio.h>
+	"CalcoloProdottoScalare.h"
+
+1417367122 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/CalcoloProdottoScalare.h
+
+1417367998 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/ProdottoScalare.h
+
+1417368247 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/ProdottoScalare.c
+	<stdlib.h>
+	<stdio.h>
+	"InserimentoRigheEColonne.h"
+	"CalcoloProdottoScalare.h"
+	"ProdottoScalare.h"
+	"InserimentoElementiMatrice.h"
+
+1417372483 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/CalcoloMatriceTrasposta.c
+	<stdlib.h>
+	<stdio.h>
+	"CalcoloMatriceTrasposta.h"
+
+1417372502 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/CalcoloMatriceTrasposta.h
+
+1417372535 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceTrasposta.c
+	<stdio.h>
+	"InserimentoRigheEColonne.h"
+	"CalcoloMatriceTrasposta.h"
+	"MatriceTrasposta.h"
+	"InserimentoElementiMatrice.h"
+
+1417369817 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/MatriceTrasposta.h
 
