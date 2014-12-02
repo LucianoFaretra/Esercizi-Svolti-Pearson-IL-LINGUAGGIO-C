@@ -1,1 +1,0 @@
-void StampaMatriceRisulta(float matrice[]);

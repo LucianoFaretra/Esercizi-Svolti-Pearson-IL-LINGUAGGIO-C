@@ -1,15 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "MatriceMoltiplicazione.h"
-#include "MatriceSomma.h"
-#include "ProdottoScalare.h"
-#include "MatriceTrasposta.h"
-
-#include "StampaMatriceRisulta.h"
-
-
-#define DIM 100
+#include "DatiGlobali.h"
+#include "InputOutput.h"
+#include "Operazioni.h"
 
 int main()
 {
@@ -18,7 +12,6 @@ float matrice2[DIM] = {0};
 float matrice3[DIM] = {0};
 
 int Decisione = -1;
-int Conferma = 0;
 
 while(Decisione < 0 || Decisione > 4)
     {
@@ -36,51 +29,42 @@ while(Decisione < 0 || Decisione > 4)
 
 if(Decisione == 1)
         {
-        printf("Hai scelto di calcolare una Matrice Scalare, se è corretto, inserisci 1 e premi INVIO, altrimenti inserisci 0 e premi INVIO per uscire dal programma \n");
-        printf("Scelta effettuata: ");
-        scanf("%d", &Conferma);
-            if(Conferma == 1)
-                {
-                ProdottoScalare(matrice, matrice3);
-                StampaMatriceRisulta(matrice3);
-                }
+        printf("Hai scelto di calcolare una Matrice Scalare, premi INVIO per continuare \n");
+        getchar();
+        getchar();
+
+        ProdottoScalare(matrice, matrice3);
+        StampaMatriceRisulta(matrice3);
         }
+
 else if(Decisione == 2)
         {
-        printf("Hai scelto di calcolare una Matrice Trasposta, se è corretto, inserisci 1 e premi INVIO, altrimenti inserisci 0 e premi INVIO per uscire dal programma \n");
-        printf("Scelta effettuata: ");
-        scanf("%d", &Conferma);
-            if(Conferma == 1)
-                {
-                MatriceTrasposta(matrice, matrice3);
-                StampaMatriceRisulta(matrice3);
-                }
+        printf("Hai scelto di calcolare una Matrice Trasposta, premi INVIO per continuare \n");
+        getchar();
+        getchar();
+        MatriceTrasposta(matrice, matrice3);
+        StampaMatriceRisulta(matrice3);
         }
 
 else if(Decisione == 3)
         {
-        printf("Hai scelto di calcolare una Somma tra due Matrici, se è corretto, inserisci 1 e premi INVIO, altrimenti inserisci 0 e premi INVIO per uscire dal programma \n");
-        printf("Scelta effettuata: ");
-        scanf("%d", &Conferma);
-            if(Conferma == 1)
-                {
-                MatriceSomma(matrice, matrice2, matrice3);
-                StampaMatriceRisulta(matrice3);
-                }
+        printf("Hai scelto di calcolare una Somma tra due Matrici, premi INVIO per continuare \n");
+        getchar();
+        getchar();
+        MatriceSomma(matrice, matrice2, matrice3);
+        StampaMatriceRisulta(matrice3);
         }
 
 else if(Decisione == 4)
         {
-        printf("Hai scelto di calcolare un Prodotto tra due Matrici, se è corretto, inserisci 1 e premi INVIO, altrimenti inserisci 0 e premi INVIO per uscire dal programma \n");
-        printf("Scelta effettuata: ");
-        scanf("%d", &Conferma);
-            if(Conferma == 1)
-                {
-                MatriceMoltiplicazione(matrice, matrice2, matrice3);
-                StampaMatriceRisulta(matrice3);
-                }
+        printf("Hai scelto di calcolare un Prodotto tra due Matrici, premi INVIO per continuare \n");
+        getchar();
+        getchar();
+        MatriceMoltiplicazione(matrice, matrice2, matrice3);
+        StampaMatriceRisulta(matrice3);
         }
-printf("\n\nGrazie per aver scelto il Nostro Programma, premi invio per uscire. \n");
+
+printf("\n\nGrazie per aver scelto il Nostro Programma, premi invio per uscire. \n\n\n Developed by Transistori");
 getchar();
 getchar();
 

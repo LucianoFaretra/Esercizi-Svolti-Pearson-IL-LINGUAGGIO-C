@@ -5,7 +5,6 @@
 		<Option title="MatriciMonoDimensionaliProgetto" />
 		<Option pch_mode="2" />
 		<Option compiler="clang" />
-		<Option virtualFolders="MoltiplicazioneDueMatrici/;SommaDueMatrici/;ProdottoScalare/;MatriceTrasposta/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/MatriciMonoDimensionaliProgetto" prefix_auto="1" extension_auto="1" />
@@ -32,58 +31,19 @@
 		<Compiler>
 			<Add option="-Weverything" />
 		</Compiler>
-		<Unit filename="CalcoloMatriceTrasposta.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="MatriceTrasposta/" />
-		</Unit>
-		<Unit filename="CalcoloMatriceTrasposta.h" />
-		<Unit filename="CalcoloProdottoDueMatrici.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="MoltiplicazioneDueMatrici/" />
-		</Unit>
-		<Unit filename="CalcoloProdottoDueMatrici.h" />
-		<Unit filename="CalcoloProdottoScalare.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="ProdottoScalare/" />
-		</Unit>
-		<Unit filename="CalcoloProdottoScalare.h" />
-		<Unit filename="CalcoloSommaDueMatrici.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="SommaDueMatrici/" />
-		</Unit>
-		<Unit filename="CalcoloSommaDueMatrici.h" />
-		<Unit filename="InserimentoElementiMatrice.c">
+		<Unit filename="AccessoAiDati.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="InserimentoElementiMatrice.h" />
-		<Unit filename="InserimentoRigheEColonne.c">
+		<Unit filename="AccessoAiDati.h" />
+		<Unit filename="DatiGlobali.h" />
+		<Unit filename="InputOutput.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="InserimentoRigheEColonne.h" />
-		<Unit filename="MatriceMoltiplicazione.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="MoltiplicazioneDueMatrici/" />
-		</Unit>
-		<Unit filename="MatriceMoltiplicazione.h" />
-		<Unit filename="MatriceSomma.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="SommaDueMatrici/" />
-		</Unit>
-		<Unit filename="MatriceSomma.h" />
-		<Unit filename="MatriceTrasposta.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="MatriceTrasposta/" />
-		</Unit>
-		<Unit filename="MatriceTrasposta.h" />
-		<Unit filename="ProdottoScalare.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="ProdottoScalare/" />
-		</Unit>
-		<Unit filename="ProdottoScalare.h" />
-		<Unit filename="StampaMatriceRisulta.c">
+		<Unit filename="InputOutput.h" />
+		<Unit filename="Operazioni.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="StampaMatriceRisulta.h" />
+		<Unit filename="Operazioni.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
