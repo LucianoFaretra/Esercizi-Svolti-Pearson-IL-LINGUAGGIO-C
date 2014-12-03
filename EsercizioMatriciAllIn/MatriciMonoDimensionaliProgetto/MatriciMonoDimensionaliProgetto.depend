@@ -8,11 +8,11 @@
 
 1417426047 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/DatiGlobali.h
 
-1417547667 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/InputOutput.h
+1417612890 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/InputOutput.h
 
 1417451162 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/Operazioni.h
 
-1417609411 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/Operazioni.c
+1417613002 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciMonoDimensionaliProgetto/Operazioni.c
 	<stdlib.h>
 	<stdio.h>
 	"DatiGlobali.h"

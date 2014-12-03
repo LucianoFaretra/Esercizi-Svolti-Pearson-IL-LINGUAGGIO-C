@@ -14,15 +14,12 @@ ScrivereElemento(matrice, righe, colonne, valore); //Reset Numero Righe
 ScrivereElemento(matrice, righe, colonne+1, valore); //Reset Numero Colonne
 
 printf("\n===========================================================================\n");
-printf("\n\t\tInserire i dati della Matrice numero: %d \n", n);
+printf("\n\t\tInserire le Righe e le Colonne della Matrice numero: %d \n", n);
+printf("\tNotaBene: una matrice non può essere composta 1 riga ed 1 colonna\n");
 printf("\n===========================================================================\n");
 
 while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(matrice, righe, colonne+1) <= 1.000000)
     {
-    printf("\n\n\n\n********************************************************************************\n");
-    printf("\n\tAttenzione una matrice non può essere composta 1 riga ed 1 colonna\n");
-    printf("\n********************************************************************************\n\n\n\n");
-
     printf("Per Cortesia inserire almeno una Riga ");
     scanf("%f", &valore);
     ScrivereElemento(matrice, righe, colonne, valore);
@@ -34,13 +31,17 @@ while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(m
 return;
 }
 
-void InserimentoElementiMatrice(float matrice[])
+void InserimentoElementiMatrice(float matrice[], int n)
 {
 int i = 0;
 int j = 0;
 float valore = 0;
 int righe = 0;
 int colonne = 0;
+
+printf("\n\n\n\n********************************************************************************\n");
+printf("\n\tProcedere all'inserimento degli Elementi della Matrice numero %d \n", n);
+printf("\n********************************************************************************\n\n\n\n");
 
 i = 0;
 while(i < LetturaElemento(matrice, righe, colonne))
@@ -95,5 +96,22 @@ while(i < LetturaElemento(matrice, righe, colonne))
 printf("\n===========================================================================\n");
 getchar();
 getchar();
+return;
+}
+
+void CopiaIndici(float matrice[], float matrice3[])
+{
+int righe = 0;
+int colonne = 0;
+float valore = 0;
+
+valore = LetturaElemento(matrice, righe, colonne);
+ScrivereElemento(matrice3, righe, colonne, valore);
+
+colonne++;
+
+valore = LetturaElemento(matrice, righe, colonne);
+ScrivereElemento(matrice3, righe, colonne, valore);
+
 return;
 }
