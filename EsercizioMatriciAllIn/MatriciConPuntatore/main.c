@@ -7,9 +7,15 @@
 
 int main()
 {
+
 float *matrice = {0};
 float *matrice2 = {0};
 float *matrice3 = {0};
+/*Allocazione memoria matrici*/
+matrice = malloc(sizeof(int));
+matrice2 = malloc(sizeof(int));
+matrice3 = malloc(sizeof(int));
+/*Fine Allocazione memoria matrici*/
 
 int Decisione = -1;
 
