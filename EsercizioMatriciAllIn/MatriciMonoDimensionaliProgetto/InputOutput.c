@@ -10,15 +10,18 @@ float valore = 0;
 int righe = 0;
 int colonne = 0;
 
+ScrivereElemento(matrice, righe, colonne, valore); //Reset Numero Righe
+ScrivereElemento(matrice, righe, colonne+1, valore); //Reset Numero Colonne
+
 printf("\n===========================================================================\n");
 printf("\n\t\tInserire i dati della Matrice numero: %d \n", n);
 printf("\n===========================================================================\n");
 
 while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(matrice, righe, colonne+1) <= 1.000000)
     {
-    printf("\n\n\n\n\n\n\n********************************************************************************\n");
+    printf("\n\n\n\n********************************************************************************\n");
     printf("\n\tAttenzione una matrice non può essere composta 1 riga ed 1 colonna\n");
-    printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+    printf("\n********************************************************************************\n\n\n\n");
 
     printf("Per Cortesia inserire almeno una Riga ");
     scanf("%f", &valore);

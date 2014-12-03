@@ -17,21 +17,19 @@ int colonne = 0;
 
 /* INIZIO BLOCCO DI INPUT*/
 n = 1;//Prima Matrice
-
 InserimentoNumeroRigheEColonne(matrice, n);
 /* FINE BLOCCO DI INPUT*/
 
 
 /* INIZIO BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 n = 1;//Prima Matrice
-
 printf("\n\n\n\n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
 printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
 InserimentoElementiMatrice(matrice);
 /* FINE BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 
-/* INIZIO BLOCCO DI CALCOLO*/
+/* Inizio Aggiornamento indici matrice Output*/
 valore = LetturaElemento(matrice, righe, colonne);
 colonne++;
 ScrivereElemento(matrice3, righe, colonne, valore);
@@ -39,9 +37,9 @@ ScrivereElemento(matrice3, righe, colonne, valore);
 valore = LetturaElemento(matrice, righe, colonne);
 colonne=0;
 ScrivereElemento(matrice3, righe, colonne, valore);
+/* Fine Aggiornamento indici matrice Output*/
 
-
-
+/* INIZIO BLOCCO DI CALCOLO*/
 i = 0;
 while(i < LetturaElemento(matrice, righe, colonne))
     {
@@ -70,17 +68,11 @@ int colonne = 0;
 float valore = 0;
 float risulta[DIM] = {0};
 
-
-float Matrice1Colonne = LetturaElemento(matrice, righe, colonne+1);
-float Matrice2Colonne = LetturaElemento(matrice2, righe, colonne+1);
-float Matrice1Righe = LetturaElemento(matrice, righe, colonne);
-float Matrice2Righe = LetturaElemento(matrice2, righe, colonne);
-
-while((int)Matrice1Colonne != (int)Matrice2Righe || (int)Matrice1Righe == 0 || (int)Matrice2Righe == 0 || (int)Matrice1Colonne == 0 || (int)Matrice2Colonne == 0)
+while(LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne) || LetturaElemento(matrice, righe, colonne) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000 || LetturaElemento(matrice, righe, colonne+1) == 0.000000 || LetturaElemento(matrice2, righe, colonne+1) == 0.000000)
       {
-       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
-       printf("Per sommare 2 matrici, il numero di righe e colonne di entrambe le Matrici devono essere di ugual numero, prego reinserire i dati. ");
-       printf("\n==============================ATTENZIONE==================================\n\n\n\n\n\n");
+       printf("n\n\n\n==============================ATTENZIONE==================================\n");
+       printf("Per moltiplicare 2 matrici, il numero di righe della seconda matrice devono essere uguali alle colonne della prima, prego reinserire i dati. ");
+       printf("\n==============================ATTENZIONE==================================\n\n\n\n");
 /* INIZIO BLOCCO DI INPUT*/
         n = 1;//Prima Matrice
 
@@ -95,16 +87,16 @@ while((int)Matrice1Colonne != (int)Matrice2Righe || (int)Matrice1Righe == 0 || (
 /* INIZIO BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 n = 1;//Prima Matrice
 
-printf("\n\n\n\n\n\n\n********************************************************************************\n");
+printf("n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
-printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+printf("\n********************************************************************************\n\n\n\n");
 InserimentoElementiMatrice(matrice);
 
 n = 2;//Seconda Matrice
 
-printf("\n\n\n\n\n\n\n********************************************************************************\n");
+printf("\n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
-printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+printf("\n********************************************************************************\n\n\n\n");
 InserimentoElementiMatrice(matrice2);
 /* FINE BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 
@@ -155,9 +147,9 @@ InserimentoNumeroRigheEColonne(matrice, n);
 /* INIZIO BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 n = 1;//Prima Matrice
 
-printf("\n\n\n\n\n\n\n********************************************************************************\n");
+printf("\n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
-printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+printf("\n********************************************************************************\n\n\n\n");
 InserimentoElementiMatrice(matrice);
 /* FINE BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 
@@ -192,9 +184,9 @@ int colonne = 0;
 
 while(LetturaElemento(matrice, righe, colonne) != LetturaElemento(matrice2, righe, colonne) || LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne+1) || LetturaElemento(matrice, righe, colonne) == 0.000000 || LetturaElemento(matrice, righe, colonne+1) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000)
         {
-       printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
+       printf("\n\n\n\n==============================ATTENZIONE==================================\n");
        printf("Per sommare 2 matrici, il numero di righe e colonne di entrambe le Matrici devono essere di ugual numero, prego reinserire i dati. ");
-       printf("\n==============================ATTENZIONE==================================\n\n\n\n\n\n");
+       printf("\n==============================ATTENZIONE==================================\n\n\n\n");
 /* INIZIO BLOCCO DI INPUT*/
        n = 1;//Prima Matrice
 
@@ -209,16 +201,16 @@ while(LetturaElemento(matrice, righe, colonne) != LetturaElemento(matrice2, righ
 /* INIZIO BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 n = 1;//Prima Matrice
 
-printf("\n\n\n\n\n\n\n********************************************************************************\n");
+printf("\n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
-printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+printf("\n********************************************************************************\n\n\n\n");
 InserimentoElementiMatrice(matrice);
 
 n = 2;//Seconda Matrice
 
-printf("\n\n\n\n\n\n\n********************************************************************************\n");
+printf("\n\n\n\n********************************************************************************\n");
 printf("\n\tProcedere all'inserimento dei dati della Matrice numero %d \n", n);
-printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
+printf("\n********************************************************************************\n\n\n\n");
 InserimentoElementiMatrice(matrice2);
 /* FINE BLOCCO INSERIMENTO ELEMENTI MATRICE*/
 
