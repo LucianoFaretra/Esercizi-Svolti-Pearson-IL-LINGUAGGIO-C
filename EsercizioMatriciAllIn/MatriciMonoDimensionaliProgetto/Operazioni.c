@@ -68,10 +68,15 @@ int c = 0;
 int righe = 0;
 int colonne = 0;
 float valore = 0;
-
 float risulta[DIM] = {0};
 
-while(LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne) || (LetturaElemento(matrice, righe, colonne) == 0 || LetturaElemento(matrice2, righe, colonne) == 0) || (LetturaElemento(matrice, righe, colonne+1) == 0 || LetturaElemento(matrice2, righe, colonne+1) == 0))
+
+float Matrice1Colonne = LetturaElemento(matrice, righe, colonne+1);
+float Matrice2Colonne = LetturaElemento(matrice2, righe, colonne+1);
+float Matrice1Righe = LetturaElemento(matrice, righe, colonne);
+float Matrice2Righe = LetturaElemento(matrice2, righe, colonne);
+
+while((int)Matrice1Colonne != (int)Matrice2Righe || (int)Matrice1Righe == 0 || (int)Matrice2Righe == 0 || (int)Matrice1Colonne == 0 || (int)Matrice2Colonne == 0)
       {
        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
        printf("Per sommare 2 matrici, il numero di righe e colonne di entrambe le Matrici devono essere di ugual numero, prego reinserire i dati. ");
@@ -184,7 +189,8 @@ float valore = 0;
 int righe = 0;
 int colonne = 0;
 
-while(LetturaElemento(matrice, righe, colonne) != LetturaElemento(matrice2, righe, colonne) || LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne+1))
+
+while(LetturaElemento(matrice, righe, colonne) != LetturaElemento(matrice2, righe, colonne) || LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne+1) || LetturaElemento(matrice, righe, colonne) == 0.000000 || LetturaElemento(matrice, righe, colonne+1) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000)
         {
        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n==============================ATTENZIONE==================================\n");
        printf("Per sommare 2 matrici, il numero di righe e colonne di entrambe le Matrici devono essere di ugual numero, prego reinserire i dati. ");
@@ -225,7 +231,7 @@ while(i < LetturaElemento(matrice, righe, colonne))
         j = 0;
         while(j < LetturaElemento(matrice, righe, colonne+1))
         {
-            valore = LetturaElemento(matrice, i, j+2) + LetturaElemento(matrice2, i, j+1);
+            valore = LetturaElemento(matrice, i, j+2) + LetturaElemento(matrice2, i, j+2);
             ScrivereElemento(matrice3, i, j+2, valore);
             j++;
         }

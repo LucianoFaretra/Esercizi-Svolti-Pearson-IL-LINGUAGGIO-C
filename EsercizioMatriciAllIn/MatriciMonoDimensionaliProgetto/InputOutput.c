@@ -14,23 +14,18 @@ printf("\n======================================================================
 printf("\n\t\tInserire i dati della Matrice numero: %d \n", n);
 printf("\n===========================================================================\n");
 
-
-
-while ((LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(matrice, righe, colonne+1) <= 1.000000))
+while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(matrice, righe, colonne+1) <= 1.000000)
     {
     printf("\n\n\n\n\n\n\n********************************************************************************\n");
     printf("\n\tAttenzione una matrice non può essere composta 1 riga ed 1 colonna\n");
     printf("\n********************************************************************************\n\n\n\n\n\n\n\n");
 
-    righe = 0;//flush righe
-    colonne = 0;//flush colonne
     printf("Per Cortesia inserire almeno una Riga ");
     scanf("%f", &valore);
     ScrivereElemento(matrice, righe, colonne, valore);
 
     printf("Per Cortesia inserire almeno una Colonna ");
     scanf("%f", &valore);
-
     ScrivereElemento(matrice, righe, colonne+1, valore);
     }
 return;
