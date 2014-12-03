@@ -7,9 +7,9 @@
 
 int main()
 {
-float matrice[DIM*DIM] = {0};
-float matrice2[DIM*DIM] = {0};
-float matrice3[DIM*DIM] = {0};
+float *matrice = {0};
+float *matrice2 = {0};
+float *matrice3 = {0};
 
 int Decisione = -1;
 
