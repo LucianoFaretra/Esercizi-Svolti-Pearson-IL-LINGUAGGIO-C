@@ -20,11 +20,11 @@ printf("\n======================================================================
 
 while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(matrice, righe, colonne+1) <= 1.000000)
     {
-    printf("Per Cortesia inserire almeno una Riga ");
+    printf("Per Cortesia inserire il numero di Righe ");
     scanf("%f", &valore);
     ScrivereElemento(matrice, righe, colonne, valore);
 
-    printf("Per Cortesia inserire almeno una Colonna ");
+    printf("Per Cortesia inserire il numero di Colonne ");
     scanf("%f", &valore);
     ScrivereElemento(matrice, righe, colonne+1, valore);
     }
