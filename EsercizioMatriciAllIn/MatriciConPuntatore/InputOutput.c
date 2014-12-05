@@ -28,6 +28,7 @@ while (LetturaElemento(matrice, righe, colonne) <= 1.000000 && LetturaElemento(m
     scanf("%f", &valore);
     ScrivereElemento(matrice, righe, colonne+1, valore);
     }
+matrice = malloc((LetturaElemento(matrice, righe, colonne))*(LetturaElemento(matrice, righe, colonne))*sizeof(float));
 return;
 }
 

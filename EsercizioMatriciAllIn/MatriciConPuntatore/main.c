@@ -12,9 +12,9 @@ float *matrice = NULL;
 float *matrice2 = NULL;
 float *matrice3 = NULL;
 /*Allocazione memoria matrici*/
-matrice = malloc((DIM*DIM)*sizeof(float));
-matrice2 = malloc((DIM*DIM)*sizeof(float));
-matrice3 = malloc(((DIM*DIM))*sizeof(float));
+matrice = malloc((2)*sizeof(float));
+matrice2 = malloc((2)*sizeof(float));
+matrice3 = malloc(((100))*sizeof(float));
 /*Fine Allocazione memoria matrici*/
 
 int Decisione = -1;
