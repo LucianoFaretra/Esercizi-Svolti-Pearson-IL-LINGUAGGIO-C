@@ -1,20 +1,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "DatiGlobali.h"
+//#include "DatiGlobali.h"
 #include "InputOutput.h"
 #include "Operazioni.h"
 
 int main()
 {
 
-float *matrice = NULL;
-float *matrice2 = NULL;
-float *matrice3 = NULL;
+//float *matrice = NULL;
+//float *matrice2 = NULL;
+//float *matrice3 = NULL;
 /*Allocazione memoria matrici*/
-matrice = malloc((2)*sizeof(float));
-matrice2 = malloc((2)*sizeof(float));
-matrice3 = malloc(((100))*sizeof(float));
+float *matrice = malloc((2)*sizeof(*matrice));
+float *matrice2 = malloc((2)*sizeof(*matrice2));
+float *matrice3 = malloc(((100))*sizeof(*matrice3));
 /*Fine Allocazione memoria matrici*/
 
 int Decisione = -1;
