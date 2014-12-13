@@ -1,18 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-#include "DatiGlobali.h"
+#define MAX 200 //Grandezza massima matrice
 #include "AccessoAiDati.h"
 
 void ScrivereElemento(float *matrice, int i, int j, float valore) //i è il valore da inserire
 {//scrive il primo elemento nella matrice
-
-*(matrice+(i*DIM+j)) = valore;
+matrice[(int)(i*MAX+j)] = valore;
 return;
 }
 
 float LetturaElemento(float *matrice, int i, int j) //restituisce il valore
 {//legge il primo elemento nella matrice
-
-return *(matrice+(i*DIM+j));
+return matrice[(int)(i*MAX+j)];
 }

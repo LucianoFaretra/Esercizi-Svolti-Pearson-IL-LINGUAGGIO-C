@@ -11,18 +11,16 @@
 
 1417617794 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.h
 
-1418491478 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.c
+1418495603 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.c
 	<stdlib.h>
 	<stdio.h>
-	"DatiGlobali.h"
 	"AccessoAiDati.h"
 
 1417617695 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.h
 
-1418492712 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.c
+1418494676 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.c
 	<stdlib.h>
 	<stdio.h>
-	"DatiGlobali.h"
 	"Operazioni.h"
 	"InputOutput.h"
 	"AccessoAiDati.h"

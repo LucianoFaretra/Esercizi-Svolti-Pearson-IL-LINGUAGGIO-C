@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "DatiGlobali.h"
+//#include "DatiGlobali.h"
 #include "Operazioni.h"
 #include "InputOutput.h"
 #include "AccessoAiDati.h"
@@ -62,7 +62,8 @@ int c = 0;
 int righe = 0;
 int colonne = 0;
 float valore = 0;
-float risulta[DIM] = {0};
+float *risulta = NULL;
+risulta = (float *)malloc(sizeof(float));
 
 /* INIZIO BLOCCO DI INPUT*/
 while(LetturaElemento(matrice, righe, colonne+1) != LetturaElemento(matrice2, righe, colonne) || LetturaElemento(matrice, righe, colonne) == 0.000000 || LetturaElemento(matrice2, righe, colonne) == 0.000000 || LetturaElemento(matrice, righe, colonne+1) == 0.000000 || LetturaElemento(matrice2, righe, colonne+1) == 0.000000)
@@ -111,7 +112,7 @@ while(i < LetturaElemento(matrice, righe, colonne))
 
 free(matrice);
 free(matrice2);
-
+free(risulta);
 return;
 }
 
