@@ -1,26 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//#include "DatiGlobali.h"
+#include "DatiGlobali.h"
 #include "InputOutput.h"
 #include "Operazioni.h"
 
 int main()
 {
 
-//(int *)malloc(sizeof(float));
+typedef struct
+    {
+    int numero_righe;
+    int numero_colonne;
+    int elementi_matrice;
+    } matrice;
 
-/*Allocazione memoria matrici*/
-float *matrice = {NULL};
-float *matrice2 = {NULL};
-float *matrice3 = {NULL};
 
-
-matrice = (float *)malloc(sizeof(float));
-matrice2 = (float *)malloc(sizeof(float));
-matrice3 = (float *)malloc(sizeof(float));
-
-/*Fine Allocazione memoria matrici*/
+//float matrice[DIM][DIM] = {{0}};
+//float matrice2[DIM][DIM] = {{0}};
+//float matrice3[DIM][DIM] = {{0}};
 
 int Decisione = -1;
 
@@ -44,7 +42,7 @@ if(Decisione == 1)
         getchar();
         getchar();
 
-        ProdottoScalare(matrice, matrice3);
+        ProdottoScalare(matrice.elementi_matrice, matrice3.elementi_matrice);
         StampaMatriceRisulta(matrice3);
         }
 

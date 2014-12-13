@@ -6,7 +6,7 @@
 #include "InputOutput.h"
 #include "AccessoAiDati.h"
 
-void MatriceTrasposta(float *matrice, float *matrice3)
+void MatriceTrasposta(float matrice[][DIM], float matrice3[][DIM])
 {
 int n = 0;
 int i = 0;
@@ -46,13 +46,10 @@ while(i < LetturaElemento(matrice, righe, colonne))
     i++;
     }
 /* FINE BLOCCO DI CALCOLO*/
-
-free(matrice);
-
 return;
 }
 
-void MatriceMoltiplicazione(float *matrice, float *matrice2, float *matrice3)
+void MatriceMoltiplicazione(float matrice[][DIM], float matrice2[][DIM], float matrice3[][DIM])
 {
 
 int n = 0;
@@ -109,13 +106,10 @@ while(i < LetturaElemento(matrice, righe, colonne))
     }
 /* FINE BLOCCO DI CALCOLO*/
 
-free(matrice);
-free(matrice2);
-
 return;
 }
 
-void ProdottoScalare(float *matrice, float *matrice3)
+void ProdottoScalare(float matrice[][DIM], float matrice3[][DIM])
 {
 int n = 0;
 int i = 0;
@@ -147,13 +141,10 @@ while(i < LetturaElemento(matrice, righe, colonne))
         }
     i++;
     }
-
-free(matrice);
-
 return;
 }
 
-void MatriceSomma(float *matrice, float *matrice2, float *matrice3)
+void MatriceSomma(float matrice[][DIM], float matrice2[][DIM], float matrice3[][DIM])
 {
 
 int n = 0;
@@ -199,8 +190,5 @@ while(i < LetturaElemento(matrice, righe, colonne))
     i++;
     }
 /* FINE BLOCCO DI CALCOLO*/
-
-free(matrice3);
-
 return;
 }

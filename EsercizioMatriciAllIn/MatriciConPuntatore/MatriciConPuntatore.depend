@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1417879088 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/main.c
+1418492712 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/main.c
 	<stdlib.h>
 	<stdio.h>
 	"InputOutput.h"
@@ -11,7 +11,7 @@
 
 1417617794 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.h
 
-1417804086 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.c
+1418491478 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.c
 	<stdlib.h>
 	<stdio.h>
 	"DatiGlobali.h"
@@ -19,7 +19,7 @@
 
 1417617695 /home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/AccessoAiDati.h
 
-1417617592 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.c
+1418492712 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/Operazioni.c
 	<stdlib.h>
 	<stdio.h>
 	"DatiGlobali.h"
@@ -27,7 +27,7 @@
 	"InputOutput.h"
 	"AccessoAiDati.h"
 
-1417881098 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/InputOutput.c
+1418491109 source:/home/ibanez89/UniBa/EsercizioMatriciAllIn/MatriciConPuntatore/InputOutput.c
 	<stdlib.h>
 	<stdio.h>
 	"InputOutput.h"
