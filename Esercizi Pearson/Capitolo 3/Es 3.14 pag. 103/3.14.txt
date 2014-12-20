@@ -1,0 +1,29 @@
+Esercizio A:
+
+	Leggi due numeri da tastiera
+	Somma i due numeri inseriti da tastiera
+	Stampa il risultato della somma
+
+Esercizio B:
+
+	Leggi due numeri da tastiera
+
+	Se il primo numero è più grande del secondo
+		Allora Stampa il primo numero
+		Altrimenti Se il secondo numero è più grande
+				Allora stampa il secondo numero
+		  	 Fine Altrimenti Se
+	Fine Se
+
+Esercizio C:
+	
+	Esegui
+	
+		Leggi il numero inserito da tastiera
+		Somma al totale il numero appena insrito
+
+	Finchè non viene inserito -1
+	Fine Esegui finchè
+	
+	Stampa totale
+	Fine
