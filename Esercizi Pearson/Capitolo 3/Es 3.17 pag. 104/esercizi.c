@@ -75,6 +75,37 @@ int main(void)
     int valoreSentinella = -1;
     float saldoAttuale = 0;
 
+    do{//Esegui finchè
+        printf("%s", "Inserire il numero di conto (-1 per uscire): ");
+        scanf("%u", &numeroConto);
+            if(numeroConto != valoreSentinella){//Esegui il seguente blocco di istruzioni se non è stato inserito il valore di uscita
+
+                    printf("%s", "Inserire il bilancio iniziale: ");
+                    scanf("%f", &saldoInizioMese);
+
+                    printf("%s", "Inserire il totale addebiti: ");
+                    scanf("%f", &totaleAddebiti);
+
+                    printf("%s", "Inserire il totale accrediti: ");
+                    scanf("%f", &totaleAccrediti);
+
+                    printf("%s", "Inserire il limite di credito concesso: ");
+                    scanf("%f", &limiteCreditoConcesso);
+
+                    saldoAttuale = (saldoInizioMese + totaleAddebiti - totaleAccrediti);
+                           if(saldoAttuale > limiteCreditoConcesso){//Esegui le seguenti istruzioni se la condizione è soddisfatta
+
+                                printf("\nNumero conto: %u", numeroConto);
+
+                                printf("Limite credito concesso: %f", limiteCreditoConcesso);
+
+                                printf("Saldo attuale: %f", saldoAttuale);
+
+                                puts("Limite Credito Superato.");
+
+                            }//Fine Se saldoAttuale > limiteCreditoConto
+                }//Fine Se numeroConto != valoreSentinella
+            }while(numeroConto != valoreSentinella);
 
 return 0;
 }//Fine funzione main
