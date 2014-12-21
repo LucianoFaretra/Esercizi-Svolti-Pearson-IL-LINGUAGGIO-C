@@ -3,7 +3,7 @@
 Affinamento Top-Down:
 
     INPUT                       DESCRIZIONE                                         DOMINIO
-    -numeroConto                Numero contro corrente cliente                      unsigned int > 0
+    -numeroConto                Numero contro corrente cliente                      int > 0
     -saldoInizioMese            Saldo conto corrente ad inizio mese                 float >= 0
     -totaleAddebiti             Totale addebiti per acquisti effettuati             float >= 0
     -totaleAccediti             Totale accediti su conto per un mese                float >= 0
@@ -67,7 +67,7 @@ Affinamento Top-Down:
 int main(void)
 {//inizio funzione main
 
-    unsigned int numeroConto = 0;
+    int numeroConto = 0;
     float saldoInizioMese = 0;
     float totaleAddebiti = 0;
     float totaleAccrediti = 0;
@@ -95,13 +95,13 @@ int main(void)
                     saldoAttuale = (saldoInizioMese + totaleAddebiti - totaleAccrediti);
                            if(saldoAttuale > limiteCreditoConcesso){//Esegui le seguenti istruzioni se la condizione è soddisfatta
 
-                                printf("\nNumero conto: %u", numeroConto);
+                                printf("\nNumero conto: %u\n", numeroConto);
 
-                                printf("Limite credito concesso: %f", limiteCreditoConcesso);
+                                printf("Limite credito concesso: %f.02\n", limiteCreditoConcesso);
 
-                                printf("Saldo attuale: %f", saldoAttuale);
+                                printf("Saldo attuale: %f.02\n", saldoAttuale);
 
-                                puts("Limite Credito Superato.");
+                                puts("Limite Credito Superato.\n");
 
                             }//Fine Se saldoAttuale > limiteCreditoConto
                 }//Fine Se numeroConto != valoreSentinella
