@@ -1,5 +1,5 @@
-/*                 Sviluppato da Luciano Faretra 21/12/2014 rilasciato sotto licenza GNUv3
-                                    Quadrati ed asterischi
+/*                 Sviluppato da Luciano Faretra 23/12/2014 rilasciato sotto licenza GNUv3
+                                    Quadrato vuoto ed asterischi
 
     Affinamento Top Down
 
@@ -16,7 +16,7 @@
     colonne                     colonne che compongono il quadrato      unsigned int >=1, <=20
     valoreSentinella            valore sentinella                       unsigned int 1;
 
-    1. Data una dimensione compresa tra 1 e 2, il programma stampa un quadrato che ha la dimensione per lato dle quadrato
+    1. Data una dimensione compresa tra 1 e 2, il programma stampa un quadrato che ha la dimensione per lato del quadrato, am vuoto all'interno
 
     1.1 Esegui
             Leggi lato
@@ -25,9 +25,15 @@
                     Se lato < 20
                         Allora
                             Assegna a valoreSentinella il valore 1
+                            azzera righe
                             mentre righe sono minori di lato
+                                azzera colonne
                                 mentre colonne sono minori di lato
-                                    Stampa "quadrato"
+                                    Se si tratta della prima riga allora stampa "*"
+                                    Altrimenti Se si tratta dell'ultima riga allora stampa "*"
+                                    Altrimenti Se si tratta della prima colonna allora stampa "*"
+                                    Altrimenti se si tratta dell'ultima colonna allora stampa "*"
+                                    Altrimenti stampa " "
                                 aumenta colonne di uno
                             aumenta righe di uno
                     Fine se
@@ -52,14 +58,28 @@ int main(void)
     do{
         printf("Inserire il lato del quadrtato: ");
         scanf("%u", &lato);
-            if( lato >= (unsigned int)MINDIMLATO ){
-                    if (lato <= (unsigned int)MAXDIMLATO){
+        lato++;//Correzione di fattore 0 del C
+            if( --lato > (unsigned int)MINDIMLATO ){
+                    if ( --lato < (unsigned int)MAXDIMLATO){
                         valoreSentinella = 1;
                             righe = 0;
-                            while( righe < lato ){
+                            while( righe <= lato ){
                                 colonne = 0;
-                                while( colonne < lato ){
-                                    printf( "*");
+                                while( colonne <= lato ){
+                                   if(righe == 0){
+                                    printf("%s", "*");
+                                   }
+                                   else if(righe == lato){
+                                    printf("%s", "*");
+                                   }
+                                   else if(colonne == 0){
+                                    printf("%s", "*");
+                                   }
+                                   else if(colonne == lato){
+                                    printf("%s", "*");
+                                   }
+                                   else
+                                    printf("%s", " ");
                                 colonne++;
                                 }//FIne while
                             puts("");
