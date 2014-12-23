@@ -17,8 +17,8 @@
    */
 #include <stdlib.h>
 #include <stdio.h>
-#define RIGHE
-#define COLONNE
+#define RIGHE 8
+#define COLONNE 8
 
 int main(void)
 {//inizio funzione main
@@ -26,12 +26,21 @@ int main(void)
     unsigned int contatoreRighe = 0;
     unsigned int contatoreColonne = 0;
 
+    contatoreRighe = 0;
     do{
+        contatoreColonne = 0;
+
         do{
             printf( "%s", "* " );
             contatoreColonne++;
-        }while( contatoreColonne < COLONNE );
-        puts("");
-    }while(contatoreRighe < RIGHE);
+        }while( contatoreColonne < (unsigned int)COLONNE);
+
+        puts(" ");
+        if(contatoreRighe % 2 == 0){
+            printf( "%s", " " );
+        }
+        contatoreRighe++;
+    }while( contatoreRighe < (unsigned int)RIGHE);
+
 return 0;
 }//Fine funzione main
