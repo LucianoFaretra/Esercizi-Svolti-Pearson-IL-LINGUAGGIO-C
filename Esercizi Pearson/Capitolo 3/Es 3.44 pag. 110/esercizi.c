@@ -1,5 +1,5 @@
 /*                 Sviluppato da Luciano Faretra 23/12/2014 rilasciato sotto licenza GNUv3
-                Il programma legge tre valori interi e dice se è possibile costruire un triangolo
+                Il programma legge tre valori interi e dice se Ã¨ possibile costruire un triangolo rettangolo
 
     Affinamento Top Down
 
@@ -13,7 +13,6 @@
     latoPiuGrande               Definisce il lato piu grande                             float > 0
     secondoLatoPiuGrande        Definsce il secondo lato piu grande                      float > 0
     terzoLatoPiuGrande          Definisce il terzo lato piu grande                       float > 0
-    totaleLati                  totale dei lati rimanenti                                float > 0
 
     DATI DI LAVORO              DESCRIZIONE                                              DOMINIO
 
@@ -86,18 +85,22 @@
         Fine Se
 
 
-        Se (primoLato + secondoLato + terzoLato) sono > del latoPiuGrande
+        Se (secondoLatoPiuGrande + terzoLatoPiuGrande) sono > del latoPiuGrande
             Allora
-                Se (primoLato - secondoLato - terzoLato) <= del latoPiuGrande
+                Se (secondoLatoPiuGrande - terzoLatoPiuGrande) <= del latoPiuGrande
                     Allora
-                        Stampa: "I lati inseriti corrispondono ad un triangolo!"
+                        Se( sqrt=((secondoLatoPiuGrande * secondoLatoPiuGrande ) + ( terzoLatoPiuGrande * terzoLatoPiuGrande ) == latoPiuGrande)
+                            Allora
+                                Stampa: "I lati inseriti corrispondono ad un triangolo Rettangolo!"
+                            Altrimenti
+                                 Stampa: "I lati inseriti corrispondono ad un triangolo NON Rettangolo!"
+
                     Altrimenti
                         Stampa: "I lati inseriti non corrispondono ad un triangolo!"
                 Fine Se
             Altrimenti
                 Stampa: "I lati inseriti non corrispondono ad un triangolo!"
         Fine Se
-
 
    */
 #include <stdlib.h>
@@ -118,7 +121,7 @@ int main(void)
     printf("%s", "Inserisci il secondo lato (>0): ");
     scanf("%f", &secondoLato);
     printf("%s", "Inserisci il terzo lato (>0): ");
-    scanf("%f", &terzolato);
+    scanf("%f", &terzoLato);
 
     if( primoLato > secondoLato ){
         if( primoLato > terzoLato ){
@@ -141,7 +144,7 @@ int main(void)
     }
     else{
         if( secondoLato > terzoLato ){
-            if( primoLato > TerzoLato ){
+            if( primoLato > terzoLato ){
                 latoPiuGrande = secondoLato;
                 secondoLatoPiuGrande = primoLato;
                 terzoLatoPiuGrande = terzoLato;
@@ -161,15 +164,22 @@ int main(void)
     }
 
 
-    if( totaleLati > latoPiuGrande ){
-        if( primoLato - secondoLato - terzoLato <= latoPiuGrande )
-                    Allora
-                        Stampa: "I lati inseriti corrispondono ad un triangolo!"
-                    Altrimenti
-                        Stampa: "I lati inseriti non corrispondono ad un triangolo!"
+    if(( secondoLatoPiuGrande + terzoLatoPiuGrande ) > latoPiuGrande ){
+        if(( secondoLatoPiuGrande - terzoLatoPiuGrande ) <= latoPiuGrande ){
+            if((secondoLatoPiuGrande * secondoLatoPiuGrande ) + ( terzoLatoPiuGrande * terzoLatoPiuGrande ) == (latoPiuGrande * latoPiuGrande)){
+                printf("%s", "I lati inseriti corrispondono ad un triangolo Rettangolo!\n");
+            }
+            else{
+                printf("%s", "I lati inseriti NON corrispondono ad un triangolo Rettangolo!\n");
+            }
+        }
+        else{
+            printf("%s", "I lati inseriti non corrispondono ad un triangolo!\n");
+        }
     }
-            Altrimenti
-                Stampa: "I lati inseriti non corrispondono ad un triangolo!"
-        Fine Se
+    else{
+        printf("%s", "I lati inseriti non corrispondono ad un triangolo!\n");
+    }
+
 return 0;
 }//Fine funzione main
