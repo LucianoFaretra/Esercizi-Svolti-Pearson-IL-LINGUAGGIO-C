@@ -4,80 +4,42 @@
     Affinamento Top Down
 
     INPUT                       DESCRIZIONE                                              DOMINIO
-    popolazioneAttuale          Popolazione mondiale attuale                             unsigned long long int > 0
+    POPOLAZIONEATTUALE2014      Popolazione mondiale attuale                             unsigned int >= 0
+    STIMACRESCITA               Stima di crescita annuale della popolazione mondiale     float >= 0
+    anniPrevisione              Mostra la stima a tot anni dall'anno attuale             unsigned int >= 0
 
     OUTPUT                      DESCRIZIONE                                              DOMIONIO
-    numeroFattoriale            fattoriale di numeroInserito                             unsigned int >= 1
+    stimaPopolazioneMondiale    Stima della popolazione mondiale in un dato tempo        unsigned int >= 0
+
 
     DATI DI LAVORO              DESCRIZIONE                                              DOMINIO
-    contatoreFattori            Contatore utilizzato per calcolare il fattoriale         unsigned int >= 1
-    contatoreMoltiplicazioni    Conta quante moltiplicazioni sono state fatte            unsigned int >= 0
+    contatoreAnniTrascorsi      Contatore anni trascorsi per il calcolo della stima      unsigned int >= 0
 
-
-    1   Il fattoriale di un numero e calcolato moltiplicando il numero stesso per n-contatore fattori, esempio,
-        n! = n * (n - 1) * (n - 2) ...
-
-     1  contatoreMoltiplicazioni = 1
-        Stampa messaggio: "Inserisci il numero su cui calcolare il Fattoriale (intero positivo): "
-        Leggi numeroInserito
-
-        Se numeroInserito >= 0
-            Allora
-                Se numeroInserito == 0
-                    Allora
-                        numeroFattoriale = 1
-                    Altrimenti
-                        contatoreFattori = numeroInserito
-
-                        Esegui
-                            numeroFattoriale *= ( numeroInserito - contatoreMoltiplicazioni )
-                            aumenta contatoreMoltiplicazioni di uno
-                        Mentre contatoreMoltiplicazioni != contatoreFattori - 1
-
-                        Stampa:"Il numero fattoriale di 'numeroInserito' e' 'numeroFattoriale'
-                Fine Se
-            Altrimenti
-                Stampa: "'numeroInserito' non e' un numero valido"
-        Fine Se
+    1. In base alla popolazione attuale e alle stime di crescita il programma stampa l'ipotetica popolazione mondiale in un dato periodo
 
    */
 #include <stdlib.h>
 #include <stdio.h>
+#define POPOLAZIONEATTUALE2014 7283292602
+#define STIMACRESCITA 1.79
 
 int main(void)
 {//inizio funzione main
 
-    unsigned long long int numeroInserito;
-    unsigned long long int numeroFattoriale = 1;
-    unsigned long long int contatoreMoltiplicazioni = 1;
-    unsigned long long int contatoreFattori = 0;
+    unsigned int anniPrevisione;
+    double stimaPopolazioneMondiale = 0;
+    unsigned int contatoreAnniTrascorsi = 0;
 
-    printf("Inserisci il numero su cui calcolare il Fattoriale (intero positivo): ");
-    scanf("%ulld", &numeroInserito);
+    printf("Inserisci il numero di anni ad oggi (2014) per stimare la popolazione mondiale a tale data: ");
+    scanf("%u", &anniPrevisione);
 
-    if( numeroInserito >= 0 ){
-        if( numeroInserito <= 20 ){
-            if( numeroInserito <= 1 ){
-                printf("Il numero fattoriale di %lld e' %lld", numeroInserito, numeroFattoriale);
-            }
-            else{
-                contatoreFattori = numeroInserito;
-                numeroFattoriale = numeroInserito;
-                do{
-                    numeroFattoriale *= ( numeroInserito - contatoreMoltiplicazioni );
-                    contatoreMoltiplicazioni++;
-                }while( contatoreMoltiplicazioni != contatoreFattori );
+    stimaPopolazioneMondiale = (double)POPOLAZIONEATTUALE2014;
+    do{
+        stimaPopolazioneMondiale += ( stimaPopolazioneMondiale * (double)STIMACRESCITA / 100 );
+        contatoreAnniTrascorsi++;
+    }while( anniPrevisione != contatoreAnniTrascorsi );
 
-                printf("Il numero fattoriale di %lld e' %lld", numeroInserito, numeroFattoriale);
-            }
-        }
-        else{
-            printf("%lld non e' un numero valido (accettati > 0 e < 20)", numeroInserito);
-        }
-    }
-    else{
-        printf("%lld non e' un numero valido (accettati > 0 e < 20)", numeroInserito);
-    }
+    printf("La popolazione stimata %u anni dopo il 2014 e' pari a: %.0lf", anniPrevisione, stimaPopolazioneMondiale);
 
 return 0;
 }//Fine funzione main
