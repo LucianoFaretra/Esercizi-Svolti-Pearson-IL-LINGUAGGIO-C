@@ -22,111 +22,79 @@
     1. Calcola la frequenza massima cardiaca possibile per un atleta, sottraendo alla FREQUENZAMASSIMACARDIACA l'età dell'atleta e calcolando il range
 
     1.1
-        Esegui
-            Esegui
-                Inserire etaAnno di nascita
-                    Se etaAnno >= 1900
-                        Allora
-                            Se etaAnno <= 2100
-                                Allora
-                                    Esegui
-                                        Esegui
-                                            Inserire etaMese di nascita
-                                                Se eraMese >= 1
+
+    Inserire etaAnno di nascita
+    Se etaAnno >= 1900
+        Allora
+            Se etaAnno <= 2100
+                Allora
+                    Inserire etaMese di nascita
+                        Se eraMese >= 1
+                            Allora
+                                Se etaMese <= 12
+                                    Allora
+                                        Se etaMese =< 7
+                                            Allora
+                                                Se etaMese % 2 != 0
                                                     Allora
-                                                        Se etaMese <= 12
+                                                        Se etaMese != 2
                                                             Allora
-                                                                Se etaMese =< 7
-                                                                    Allora
-                                                                        Se etaMese % 2 != 0
-                                                                            Allora
-                                                                                Se etaMese != 2
-                                                                                    Allora
-                                                                                        Esegui
-                                                                                            Esegui
-                                                                                                Inserire etaGiorno di nascita
-                                                                                            Finchè etaGiorno <= 30
-                                                                                        Finchè etaGiorno => 1
-                                                                                    Altrimenti
-                                                                                        Se (etaAnno % 400 == 0 || (etaAnno % 100 != 0 && etaAnno % 4 == 0))
-                                                                                            Allora
-                                                                                                Esegui
-                                                                                                    Esegui
-                                                                                                        Inserire etaGiorno di nascita
-                                                                                                    Finchè etaGiorno <= 29
-                                                                                                Finchè etaGiorno => 1
-                                                                                            Altrimenti
-                                                                                                Esegui
-                                                                                                    Esegui
-                                                                                                        Inserire etaGiorno di nascita
-                                                                                                    Finchè etaGiorno <= 28
-                                                                                                Finchè etaGiorno => 1
-                                                                                        Fine Se
-                                                                                Fine Se
-                                                                            Altrimenti
-                                                                                Esegui
-                                                                                    Esegui
-                                                                                        Inserire etaGiorno di nascita
-                                                                                    Finchè etaGiorno <= 31
-                                                                                Finchè etaGiorno => 1
-                                                                        Fine Se
-                                                                Fine Se
-                                                                Altrimenti Se etaMese <= 12
-                                                                    Allora
-                                                                        Se etaMese % 2 != 0
-                                                                            Allora
-                                                                                Esegui
-                                                                                    Esegui
-                                                                                        Inserire etaGiorno di nascita
-                                                                                    Finchè etaGiorno <= 31
-                                                                                Finchè etaGiorno => 1
-                                                                            Altrimenti
-                                                                                Esegui
-                                                                                    Esegui
-                                                                                        Inserire etaGiorno di nascita
-                                                                                    Finchè etaGiorno <= 30
-                                                                                Finchè etaGiorno => 1
-                                                                        FineSe
-                                                                    Altrimenti
-                                                                        Stanpa: "Attenzione e' stato inserito un mese invalido"
-                                                                Fine Altrimenti Se
+                                                                Inserire etaGiorno di nascita
                                                             Altrimenti
-                                                                Stanpa: "Attenzione e' stato inserito un mese invalido"
+                                                                Se (etaAnno % 400 == 0 || (etaAnno % 100 != 0 && etaAnno % 4 == 0))
+                                                                    Allora
+                                                                        Inserire etaGiorno di nascita
+                                                                    Altrimenti
+                                                                        Inserire etaGiorno di nascita
+                                                                Fine Se
                                                         Fine Se
                                                     Altrimenti
-                                                        Stanpa: "Attenzione e' stato inserito un mese invalido"
+                                                       Inserire etaGiorno di nascita
                                                 Fine Se
-                                            Finchè etaMese <= 12
-                                        Finchè etaMese => 1
-                                Altrimenti
-                                    Stanpa: "Attenzione e' stato inserito un anno invalido"
-                            Fine Se
-                        Altrimenti
-                            Stanpa: "Attenzione e' stato inserito un anno invalido"
-                    Fine Se
-            Finchè etaAnno <= 2100
-        Finchè etaAnno => 1900
+                                        Fine Se
+                                        Altrimenti Se etaMese <= 12
+                                            Allora
+                                                Se etaMese % 2 != 0
+                                                    Allora
+                                                        Inserire etaGiorno di nascita
+                                                    Altrimenti
+                                                        Inserire etaGiorno di nascita
+                                                FineSe
+                                            Altrimenti
+                                                Stanpa: "Attenzione e' stato inserito un mese invalido"
+                                        Fine Altrimenti Se
+                                    Altrimenti
+                                        Stanpa: "Attenzione e' stato inserito un mese invalido"
+                                Fine Se
+                            Altrimenti
+                                Stanpa: "Attenzione e' stato inserito un mese invalido"
+                        Fine Se
+
+                Altrimenti
+                    Stanpa: "Attenzione e' stato inserito un anno invalido"
+            Fine Se
+        Altrimenti
+            Stanpa: "Attenzione e' stato inserito un anno invalido"
+    Fine Se
 
 
-        Esegui
-            Esegui
-                Inserire annoAttuale
-                    Se annoAttuale >= 1900
-                        Allora
-                            Se annoAttuale <= 2100
-                                Allora
-                                    Se annoAttuale > etaAnno
-                                        Allora
-                                            Stampa "E' stato inserito un anno corrente sicuramente errato"
-                                    Fine Se
-                                Altrimenti
-                                    Stampa "E' stato inserito un anno corrente sicuramente errato"
-                            Fine Se
-                        Altrimenti
-                            Stampa "E' stato inserito un anno corrente sicuramente errato"
-                    Fine Se
-            Finchè etaAnno <= 2100
-        Finchè etaAnno => 1900
+
+    Inserire annoAttuale
+        Se annoAttuale >= 1900
+            Allora
+                Se annoAttuale <= 2100
+                    Allora
+                        Se annoAttuale > etaAnno
+                            Allora
+                                Stampa "E' stato inserito un anno corrente sicuramente errato"
+                        Fine Se
+                    Altrimenti
+                        Stampa "E' stato inserito un anno corrente sicuramente errato"
+                Fine Se
+            Altrimenti
+                Stampa "E' stato inserito un anno corrente sicuramente errato"
+        Fine Se
+
 
         etaAtleta = ( annoAttuale - etaAnno )
         FrequenzaMassimaCardiaca = ( FREQUENZAMASSIMACARDIACA - etaAtleta)
