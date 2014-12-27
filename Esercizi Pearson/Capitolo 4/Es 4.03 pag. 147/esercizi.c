@@ -43,8 +43,33 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 int main(void)
 {//inizio funzione main
+
+    unsigned short int x;
+
+//Versione D
+    x = 0;
+    while(x++ < 20 ){
+        printf("%3u", x);
+        if( 0 == ( x % 5 ) ){
+            puts("");
+        }
+        else{
+            printf("%s", "\t");
+        }
+    }
+puts("");
+//Versione E
+    for(x = 1; x <= 20; x++){
+        printf("%3u", x);
+        if( 0 == x % 5 ){
+            puts("");
+        }
+        else{
+            printf("%s", "\t");
+        }
+    }
+
 return 0;
 }//Fine funzione main
