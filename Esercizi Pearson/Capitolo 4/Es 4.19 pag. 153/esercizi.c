@@ -1,136 +1,95 @@
 /*                 Sviluppato da Luciano Faretra 28/12/2014 rilasciato sotto licenza GNUv3
-                                    Stampa grafico a barre
-
+                                    Calcolo delle vendite
     Affinamento Top Down
 
     INPUT                           DESCRIZIONE                                                     DOMINIO
-    NUMEROMINIMO                    Numero minimo accettato                                         unsigned intero
-    NUMEROMASSIMO                   Numero massimo accettato                                        unsigned intero
-    primoNumero                     primo numero inserito dall'utente                               unsigned intero >= NUMEROMINIMO, <= NUMEROMASSIMO
-    secondoNumero                   secondo numero inserito dall'utente                             unsigned intero >= NUMEROMINIMO, <= NUMEROMASSIMO
-    terzoNumero                     terzo numero inserito dall'utente                               unsigned intero >= NUMEROMINIMO, <= NUMEROMASSIMO
-    quartoNumero                    quarto numero inserito dall'utente                              unsigned intero >= NUMEROMINIMO, <= NUMEROMASSIMO
-    quintoNumero                    quinto numero inserito dall'utente                              unsigned intero >= NUMEROMINIMO, <= NUMEROMASSIMO
+    numeroProdotto                  Numero identificativo prodotto                                  unsigned intero > 0
+    quantitaVenduta                 Numero di oggetti venduti del tipo numeroProdotto               unsigned intero >= 0
+    prezzoUnitarioDettaglio         Prezzo relativo al singolo oggetto                              float > 0
 
     OUTPUT                          DESCRIZIONE                                                     DOMIONIO
-    *                               Carattere utilizzato per stampare                               char
+    totaleVendite                   totale vendite in dollari del prodotto selezionato               float >= 0
 
     DATI DI LAVORO                  DESCRIZIONE                                                     DOMINIO
-    contatoreInserimenti            contatore utilizzato per controllare le stampe di *             unsigned intero >= 0
 
 
-    1. L'utente inserisce 5 numeri interi ta 1 e 30 e stampa il relativo grafico
+    1. l'utente inserisce il numero prodotto e la quantita di venduto ed il programma il valroe al dettaglio dei prodotti venduti
 
-    1.1 Stampa:"Inserire il primo numero di cinque ( > 0 e < 31 ): "
-        leggi primoNumero
-        Stampa:"Inserire il secondo numero di cinque ( > 0 e < 31 ): "
-        leggi secondoNumero
-        Stampa:"Inserire il terzo numero di cinque ( > 0 e < 31 ): "
-        leggi terzoNumero
-        Stampa:"Inserire il quarto numero di cinque ( > 0 e < 31 ): "
-        leggi quartoNumero
-        Stampa:"Inserire il quinto numero di cinque ( > 0 e < 31 ): "
-        leggi quintoNumero
 
-        Se primoNumero e secondoNumero e terzoNumero e quartoNumero e quintoNumero solo => di NUMEROMINIMO e =< di NUMEROMASSIMO
-            Allora
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= primoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
+    1.1 Stampa:"Inserire il numero del prodotto venduto e la quantita venduta in questa settimana: "
+        leggi numeroProdotto quantitaVenduta
 
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= secondoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
+        nel caso numeroProdotto == 1
+            prezzoUnitarioDettaglio = 2.98
+        nel caso numeroProdotto == 2
+            prezzoUnitarioDettaglio = 4.50
+        nel caso numeroProdotto == 3
+            prezzoUnitarioDettaglio = 9.98
+        nel caso numeroProdotto == 4
+            prezzoUnitarioDettaglio = 4.49
+        nel caso numeroProdotto == 5
+            prezzoUnitarioDettaglio = 6.87
 
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= terzoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
+       totaleVendite = ( prezzoUnitarioDettaglio * quantitaVenduta )
 
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= terzoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
-
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= quartoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
-
-                contatoreInserimenti = 0;
-                Per(contatoreInserimenti = 1; finchè contatoreInserimenti <= quintoNumero; incrementa contatoreInserimenti di 1)
-                    Stampa "*"
-                Fine Per
-
-            Altrimenti
-                Stampa:"Sono accettati solo valori compresi tra 'NUMEROMINIMO' e 'NUMEROMASSIMO'"
-        Fine Se
+        Stampa:"Le vendite totali del prodotto 'numeroProdotto' al prezzo unitario di $'prezzoUnitarioDettaglio' sono state di: $'totaleVendite'
 
 */
 
 #include <stdlib.h>
 #include <stdio.h>
-#define NUMEROMINIMO 1
-#define NUMEROMASSIMO 30
 
 int main(void)
 {//inizio funzione main
 
-    unsigned int primoNumero;
-    unsigned int secondoNumero;
-    unsigned int terzoNumero;
-    unsigned int quartoNumero;
-    unsigned int quintoNumero;
-    unsigned int contatoreInserimenti;
+    unsigned int numeroProdotto;
+    unsigned int quantitaVenduta;
+    float prezzoUnitarioDettaglio;
+    float totaleVendite;
+    unsigned int valoreSentinella = 1;
 
 
-    printf( "%s", "Inserire il primo numero di cinque ( > 0 e < 31 ): ");
-    scanf( "%u", &primoNumero );
-    printf( "%s", "Inserire il secondo numero di cinque ( > 0 e < 31 ): ");
-    scanf( "%u", &secondoNumero );
-    printf( "%s", "Inserire il terzo numero di cinque ( > 0 e < 31 ): ");
-    scanf( "%u", &terzoNumero );
-    printf( "%s", "Inserire il quarto numero di cinque ( > 0 e < 31 ): ");
-    scanf( "%u", &quartoNumero );
-    printf( "%s", "Inserire il quinto numero di cinque ( > 0 e < 31 ): ");
-    scanf( "%u", &quintoNumero );
+    printf( "%s", "Inserire il CODICE PRODOTTO e la QUANTITA' venduta questa settimana separati da uno spazio: ");
+    scanf("%u %u", &numeroProdotto, &quantitaVenduta);
 
-    if(( primoNumero >= NUMEROMINIMO && primoNumero <= NUMEROMASSIMO ) && ( secondoNumero >= NUMEROMINIMO && secondoNumero <= NUMEROMASSIMO ) && ( terzoNumero >= NUMEROMINIMO && terzoNumero <= NUMEROMASSIMO ) && ( quartoNumero >= NUMEROMINIMO && quartoNumero <= NUMEROMASSIMO ) && ( quintoNumero >= NUMEROMINIMO && quintoNumero <= NUMEROMASSIMO )){
-        contatoreInserimenti = 0;
-        for(contatoreInserimenti = 1; contatoreInserimenti <= primoNumero; contatoreInserimenti++ ){
-            printf("%s", "*");
-        }
-        printf("%s", "\n");
+    switch( numeroProdotto ){
+        case( 1 ):
+            prezzoUnitarioDettaglio = 2.98;
+            break;
 
-        contatoreInserimenti = 0;
-        for(contatoreInserimenti = 1; contatoreInserimenti <= secondoNumero; contatoreInserimenti++ ){
-            printf("%s", "*");
-        }
-        printf("%s", "\n");
+        case( 2 ):
+            prezzoUnitarioDettaglio = 4.50;
+            break;
 
-        contatoreInserimenti = 0;
-        for(contatoreInserimenti = 1; contatoreInserimenti <= terzoNumero; contatoreInserimenti++ ){
-            printf("%s", "*");
-        }
-        printf("%s", "\n");
+        case( 3 ):
+            prezzoUnitarioDettaglio = 9.98;
+            break;
 
-        contatoreInserimenti = 0;
-        for(contatoreInserimenti = 1; contatoreInserimenti <= quartoNumero; contatoreInserimenti++ ){
-            printf("%s", "*");
-        }
-        printf("%s", "\n");
+        case( 4 ):
+            prezzoUnitarioDettaglio = 4.49;
+            break;
 
-        contatoreInserimenti = 0;
-        for(contatoreInserimenti = 1; contatoreInserimenti <= quintoNumero; contatoreInserimenti++ ){
-            printf("%s", "*");
-        }
-        printf("%s", "\n");
+        case( 5 ):
+            prezzoUnitarioDettaglio = 6.87;
+            break;
+        case( '\n' ):
+        case( '\t' ):
+        case( ' ' ):
+            break;
 
+        default:
+            puts("Valore errato, reinserire codice prodotto.");
+            valoreSentinella = 0;
+            break;
     }
-    else
-        printf("\nSono accettati solo valori compresi tra %u e %u\n", NUMEROMINIMO, NUMEROMASSIMO);
+
+    if( valoreSentinella == 1 ){
+        totaleVendite = ( prezzoUnitarioDettaglio * quantitaVenduta );
+
+        puts("");
+        printf( "Le vendite del prodotto %u \"prezzo al dettaglio $%.2f\" sono state di: $%.2f", numeroProdotto, prezzoUnitarioDettaglio, totaleVendite );
+        puts("");
+    }
 
 return 0;
 }//Fine funzione main
