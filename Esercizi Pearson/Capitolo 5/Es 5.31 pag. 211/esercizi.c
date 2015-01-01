@@ -14,52 +14,41 @@
 
     1. Simula il lancio di una monetina e da testa o croce
 
-    1.1 Se numeroDaControllare >= 2
-            Allora
-                contatoreDivisione = numeroDaControllare
-                Mentre contatoreDivisione >= 2
-                    Se numeroDaControllare % contatoreDivisione == 0
-                        Allora
-                            return 0
-                        Altrimenti
-                            decrementa contatoreDivisione di 1
-                    Fine Se
-                Fine Mentre
-                return 1
-            Altrimenti
-                return 0
+    1.1 return srand(time(NULL)) % 2
+
+
 
        ******************************************************************************************
        **Funzione main
 
     INPUT                           DESCRIZIONE                                                     DOMINIO
-    maxNumDaControllare             Inserisci quanti numeri da controllare per vede se sono primi   unsgned int >= 1
+    TentativiDaControllare          Tetativi per cui lanciare la monetina                           unsgned int >= 1
 
     OUTPUT                          DESCRIZIONE                                                     DOMIONIO
-    numeroPrimo                     E' un numero primo                                              unsigned int >= 1
+    numeroTesta                     Numero di volte in cui e' uscito testa                          unsigned int >= 0
+    numeroCroce                     Numero di volte in cui e' uscito croce                          unsigned int >= 0
 
     DATI DI LAVORO                  DESCRIZIONE                                                     DOMINIO
-    contatoreNumeri                 Contatore che permette la selezione dei numeri                  unsigned int >= 1
 
 
     1.1 Esegui
-            Stampa:"Indica quanti numeri si desidera controllare: "
-            Leggi: maxNumDaControllare
+            Stampa:"Indica quante volte vuoi lanciare la moneta: "
+            Leggi: TentativiDaControllare
 
                 Esegui
 
-                    numeroPrimo = controlloNumeroPrimo(numeroDaControllare)
-                    Se numeroPrimo == 1
+                    Se flip(void) == 0
                         Allora
-                            Stampa: " 'contatoreNumeri' e' un numero primo!!"
-                    Fine Se
-                    Incrementa contatoreNumeri di 1
+                            numeroCroce + 1
+                        Altrimenti
+                            numeroTesta +1
 
-                Finchè contatoreNumeri <= maxNumDaControllare
+                Finchè TentativiDaControllare != 0
 
+        Finchè TentativiDaControllare >= 1
 
-        Finchè maxNumDaControllare >= 0
-
+        Stampa:"Il numero volte in cui e' uscita testa e' pari a: numeroTesta"
+        Stampa:"Il numero volte in cui e' uscita croce e' pari a: numeroCroce"
 
 */
 
@@ -68,48 +57,42 @@
 
 int main(void)
 {//inizio funzione main
-    unsigned int controlloNumeroPrimo( unsigned int numeroDaControllare);
+    unsigned int flip(void);
 
-    unsigned int maxNumDaControllare;
-    unsigned int numeroPrimo;
-    unsigned int contatoreNumeri = 1;
-    unsigned int quantiNumeriPrimi = 0;
+    unsigned int TentativiDaControllare;
+    unsigned int numeroCroce = 0;
+    unsigned int numeroTesta = 0;
 
-    printf( "%s", "Indica quanti numeri si desidera controllare: " );
-    scanf( "%u", &maxNumDaControllare );
+        printf( "%s", "Indica quante volte vuoi lanciare la moneta: " );
+        scanf( "%u", &TentativiDaControllare );
 
-    do{
-        numeroPrimo = controlloNumeroPrimo(contatoreNumeri);
-        if( numeroPrimo == 1 ){
-            printf( "%u e' un numero primo!!\n", contatoreNumeri );
-            quantiNumeriPrimi++;
+        if(TentativiDaControllare >= 1){
+
+            do{
+
+                if( flip() == 0 ){
+                    numeroCroce++;
+                }
+                else{
+                    numeroTesta++;
+                }
+                printf("%d\n", flip());
+            TentativiDaControllare--;
+            }while(TentativiDaControllare > 0);
+        }
+        else{
+            printf("%s", "E' stato inserito un valore non valido");
         }
 
-    }while( contatoreNumeri++ < maxNumDaControllare );
-
-    printf("\nSono stati scoperti: %u numeri primi", quantiNumeriPrimi );
+    printf( "Il numero volte in cui e' uscita testa e' pari a: %u\n", numeroTesta );
+    printf( "Il numero volte in cui e' uscita croce e' pari a: %u\n", numeroCroce );
 
 return 0;
 }//Fine funzione main
 
-unsigned int controlloNumeroPrimo( unsigned int numeroDaControllare )
+unsigned int flip(void)
 {
-    unsigned int contatoreDivisione;
+    srand( time(NULL));
 
-    if( numeroDaControllare >= 2 ){
-
-        contatoreDivisione = ( numeroDaControllare - 1 );
-        while( contatoreDivisione >= 2 ){
-            if( numeroDaControllare % contatoreDivisione == 0 ){
-                return 0;
-            }
-            else{
-                contatoreDivisione--;
-            }
-        }
-        return 1;
-    }
-    else{
-        return 0;
-    }
+return rand() % 2;
 }
