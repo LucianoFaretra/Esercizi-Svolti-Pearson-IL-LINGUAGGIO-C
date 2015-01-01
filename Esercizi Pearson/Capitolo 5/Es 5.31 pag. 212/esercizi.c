@@ -54,6 +54,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 int main(void)
 {//inizio funzione main
@@ -62,6 +63,8 @@ int main(void)
     unsigned int TentativiDaControllare;
     unsigned int numeroCroce = 0;
     unsigned int numeroTesta = 0;
+
+    srand( time(NULL));
 
         printf( "%s", "Indica quante volte vuoi lanciare la moneta: " );
         scanf( "%u", &TentativiDaControllare );
@@ -76,7 +79,6 @@ int main(void)
                 else{
                     numeroTesta++;
                 }
-                printf("%d\n", flip());
             TentativiDaControllare--;
             }while(TentativiDaControllare > 0);
         }
@@ -92,7 +94,6 @@ return 0;
 
 unsigned int flip(void)
 {
-    srand( time(NULL));
 
 return rand() % 2;
 }
