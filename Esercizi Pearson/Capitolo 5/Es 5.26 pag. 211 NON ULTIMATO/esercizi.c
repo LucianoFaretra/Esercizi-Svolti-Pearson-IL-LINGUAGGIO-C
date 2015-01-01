@@ -2,7 +2,7 @@
                                     Numeri perfetti
     Affinamento Top Down
 
-    **Funzione - perfetto(numeroDaContrallare)
+    **Funzione - perfetto(numeroFattoriale)
 
     INPUT                           DESCRIZIONE                                                     DOMINIO
     numeroDaContrallare             Numero da controllare se e perfetto                             unsigned int >= 1
@@ -65,6 +65,7 @@
 
 int main(void)
 {//inizio funzione main
+    unsigned int perfetto( unsigned int numeroFattoriale);
 
     unsigned int maxNumDaControllare;
     unsigned int numeroDaControllare;
@@ -74,26 +75,28 @@ int main(void)
         printf( "%s", "inserisci i numeri, partendo da 0 da controllare: " );
         scanf( "%u", &maxNumDaControllare );
         if ( maxNumDaControllare++ >= 1 ){
-            perfetto(numeroDaContrallare);
+            perfetto(numeroDaControllare);
         }
     }while( numeroDaControllare <= maxNumDaControllare );
 
 return 0;
 }//Fine funzione main
 
-unsigned int perfetto( unsigned int numeroDaContrallare)
+unsigned int perfetto( unsigned int numeroFattoriale)
 {
+    unsigned int contatoreFattoriale = 1;
 
-    if( numeroDaControllare >= 2 ){
+
+    if( numeroFattoriale >= 2 ){
         while( contatoreFattoriale++ < numeroFattoriale ){
-            numeroFattoriale - contatoreFattoriale
-            numeroPerfetto += contatoreFattoriale
+             ( numeroFattoriale - contatoreFattoriale );
+            numeroPerfetto += contatoreFattoriale;
         }
         if( numeroPerfetto == numeroFattoriale ){
             printf("%u e' un numero Perfetto!!!\n", numeroFattoriale );
             printf("%u = ", numeroFattoriale );
             while( contatoreFattoriale < numeroFattoriale ){
-                numeroFattoriale - contatoreFattoriale
+                numeroFattoriale - contatoreFattoriale;
                 Stampa:" + 'contatoreFattoriale'"
                 incrementa contatoreFattoriale di uno
             }
