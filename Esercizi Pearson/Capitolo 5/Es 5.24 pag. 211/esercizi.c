@@ -85,40 +85,41 @@
 int main(void)
 {//inizio funzione main
 
-    float celsius( unsigned int gradiFahrenheit);
-    float fahrenheit( unsigned int gradiCelsius);
+    float celsius( float gradiFahrenheit);
+    float fahrenheit( float gradiCelsius);
 
-    unsigned int contatoreCelsius = 0;
-    unsigned int contatoreFahrenheit = 32;
+    float contatoreCelsius = 0;
+    float contatoreFahrenheit = 32;
 
-    printf( "%33s\t%31s", "Conversione Celsius in Fahrenheit", "Conversione Fahrenheit in Celsius");
+    printf( "%33s\t%31s\n", "Conversione Celsius in Fahrenheit", "Conversione Fahrenheit in Celsius");
 
     do{
 
-        do{
+        while( contatoreCelsius++ < 100 ){
 
-            printf( "%u e' pari a: %.2f \t\t %u e' pari a: %.2f", contatoreCelsius,  fahrenheit(contatoreCelsius), contatoreFahrenheit, celsius(contatoreFahrenheit) );
+            printf( "%.2f e' pari a: %.2f \t\t\t %.2f e' pari a: %.2f\n", contatoreCelsius,  fahrenheit(contatoreCelsius), contatoreFahrenheit, celsius(contatoreFahrenheit) );
             contatoreFahrenheit++;
+        }
+            printf( "%33s\t\t %.2f e' pari a: %.2f\n", " ", contatoreFahrenheit, celsius(contatoreFahrenheit ));
 
-        }while( contatoreCelsius++ <= 100 );
-            printf( "%33s\t\t %u e' pari a: %.2f", " ", contatoreFahrenheit, celsius(contatoreFahrenheit ));
-
-    }while( contatoreFahrenheit++ <= 212 );
+    }while( contatoreFahrenheit++ < 212 );
 
 
 return 0;
 }//Fine funzione main
 
-float celsius( unsigned int gradiFahrenheit)
+float celsius( float gradiFahrenheit)
 {
     float gradiCelsius;
 
-return gradiCelsius = (gradiFahrenheit − 32) \ 1,8;
+    gradiCelsius = ( ( gradiFahrenheit - 32 ) / 1.8 );
+
+return gradiCelsius;
 }
 
-float fahrenheit( unsigned int gradiCelsius)
+float fahrenheit( float gradiCelsius)
 {
     float gradiFahrenheit;
 
-return gradiFahrenheit = (gradiCelsius +1,8 ) − 32;
+return gradiFahrenheit = (gradiCelsius * 1.8 ) + 32;
 }
