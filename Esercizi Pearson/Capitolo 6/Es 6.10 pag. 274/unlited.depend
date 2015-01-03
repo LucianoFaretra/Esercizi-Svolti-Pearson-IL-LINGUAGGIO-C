@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1420238918 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.10 pag. 274\arrotondamentimonetari.c
+	<math.h>
+
+1420237369 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.10 pag. 274\percentualesuimporto.c
+
+1420241261 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.10 pag. 274\main.c
+	<stdlib.h>
+	<stdio.h>
+	"percentualeSuImporto.h"
+	"arrotondamentiMonetari.h"
+
+1420237459 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.10 pag. 274\percentualesuimporto.h
+
+1420238989 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.10 pag. 274\arrotondamentimonetari.h
+
