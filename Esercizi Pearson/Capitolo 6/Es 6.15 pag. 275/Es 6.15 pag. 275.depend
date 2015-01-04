@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1420306201 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.15 pag. 275\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bubbleSort.h"
+
+1420303216 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.15 pag. 275\libreriarandom.h
+
+1420303722 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.15 pag. 275\libreriarandom.c
+	<stdlib.h>
+	<time.h>
+
+1420304575 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.15 pag. 275\bubblesort.c
+	<stdio.h>
+	<stdlib.h>
+
+1420304650 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 6.15 pag. 275\bubblesort.h
+

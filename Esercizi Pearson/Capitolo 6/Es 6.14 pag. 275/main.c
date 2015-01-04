@@ -97,6 +97,8 @@ void mode( unsigned int freq[], const unsigned int answer[] )
     unsigned int largest = 0;
     unsigned int secondlargest = 0;
     unsigned int modeValue = 0;
+    unsigned int modeValue2 = 0;
+
 
     printf( "\n%s\n%s\n%s\n", "********", " Mode", "*********" );
 
@@ -114,8 +116,10 @@ void mode( unsigned int freq[], const unsigned int answer[] )
     for( rating = 1; rating <= 9; ++rating){
         printf( "%8u%11u        ", rating, freq[ rating ] );
 
-        if( freq[ rating ] > largest ){
+        if( freq[ rating ] >= largest ){
+            secondlargest = largest;
             largest = freq[ rating ];
+            modeValue2 = modeValue;
             modeValue = rating;
         }
 
@@ -126,9 +130,16 @@ void mode( unsigned int freq[], const unsigned int answer[] )
         puts( "" );
     }
 
+    if( largest == secondlargest ){
+        printf( "\nThe mode is the most frequent value.\n"
+            "For this run the mode is %u and %u wich occurred"
+            " %u times each.\n", modeValue, modeValue2, largest );
+    }
+    else{
     printf( "\nThe mode is the most frequent value.\n"
             "For this run the mode is %u wich occurred"
             " %u times.\n", modeValue, largest );
+    }
 return;
 }
 
