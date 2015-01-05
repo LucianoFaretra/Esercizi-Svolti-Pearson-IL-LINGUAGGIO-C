@@ -1,49 +1,6 @@
 /*                 Sviluppato da Luciano Faretra 05/01/2015 rilasciato sotto licenza GNUv3
                                     La tartaruga e la lepre
 
-    Affinamento Top Down Funzione CalcolaSpostamentoTartaruga(
-
-    1 Viene simulata la corsa della lepre, vince chi arriva prima alla posizione 70
-
-    2 I due animali hanno velocita diverse di camminate, a seconda della probabilita casuale possono camminare correre scivolare ecc...
-
-    3   Stampa:"BANG !!!!"
-        Stampa:"AND THEY'RE OFF !!!!"
-        Esegui
-
-            Entrambi Partono da 0
-            Viene estratto un numero a sorte per la tartaruga, se i >= 1 e <= 5 cammina di 3 quadrati ecc...
-                Se e' una scivolata
-                    Allora
-                        Se posizioneTartaruga <= 6
-                            Allora
-                                posizioneTartaruga = 1
-                            Altrimenti
-                                posizioneTartaruga -= 6
-                    Altrimenti
-                        posizioneTartaruga viene incrementato di conseguenza
-            Viene estratto un numero a sorte per il coniglio
-                Se e' una scivolata
-                    Allora
-                        Se posizioneLepre <= 12
-                            Allora
-                                posizioneLepre = 1
-                            Altrimenti
-                                posizioneLepre -= 12
-                    Altrimenti
-                        posizioneLepre viene incrementato di conseguenza
-
-            Se posizioneTartaruga == posizioneLepre
-                Allora
-                    Stampa:"OUCH!!!"
-                    posizioneTartaruga = 0;
-                    posizioneLepre = 0;
-
-            StampaPosizioni( posizioneTartaruga, posizioneLepre, LUNGHEZZACAMPO )
-
-        Finchè posizioneLepre == LUNGHEZZACAMPO || posizioneTartaruga == LUNGHEZZACAMPO
-
-
 */
 
 #include <stdio.h>
@@ -69,28 +26,13 @@ int main()
         if( posizioneTartaruga == posizioneLepre ){
             puts("");
             puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
             puts("****************************************************");
-            printf( "%s", "OUCH!!!\n" );
+            printf( "%s", "OUCH!!! Mi ha morso! Si ricomincia!\n" );
             puts("****************************************************");
             puts("");
             puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
-            puts("");
+            puts("Premi Invio per continuare");
+            getchar();
             posizioneLepre = 1;
             posizioneTartaruga = 1; //Riavvia La gara!
         }
@@ -132,9 +74,12 @@ int main()
     }
     else if( posizioneLepre >= LUNGHEZZACAMPO && posizioneTartaruga < LUNGHEZZACAMPO ){
         puts("Abbiamo un vincitore! La lepre...");
+        puts("Premi Invio per uscire");
+
     }
     else if( posizioneTartaruga >= LUNGHEZZACAMPO && posizioneLepre < LUNGHEZZACAMPO ){
         puts("LA TARTARUGA VINCE!!! YAY!!!");
+        puts("Premi Invio per uscire");
     }
 
 return 0;
@@ -218,10 +163,9 @@ return posizioneAttuale;
 
 void StampaPosizioneTartaruga( unsigned int posizioneT, unsigned int lunghezzaCampo )
 {
-    //char percorso[lunghezzaCampo + 1]; //Lo 0 non ci piace
     size_t i;
 
-    if( posizioneT > 0 && posizioneT < 70 ){
+    if( posizioneT <= 70 ){
         i = 1;
         while( i < posizioneT ){
            printf(" ");
@@ -240,10 +184,9 @@ return;
 
 void StampaPosizioneLepre( unsigned int posizioneH, unsigned int lunghezzaCampo )
 {
-    //char percorso[lunghezzaCampo + 1]; //Lo 0 non ci piace
     size_t i;
 
-    if( posizioneH > 0 && posizioneH <= 70 ){
+    if( posizioneH <= 70 ){
         i = 1;
         while( i < posizioneH ){
            printf(" ");
