@@ -21,6 +21,7 @@
 //#include "deal.h"
 #include "risultatiCarte.h"
 #include "shuffle.h"
+#include "manoPoker.h"
 
 int main()
 {

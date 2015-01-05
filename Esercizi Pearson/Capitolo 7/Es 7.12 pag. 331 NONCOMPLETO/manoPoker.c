@@ -28,11 +28,12 @@
 
 
 #include "globale.h"
+#include "risultatiCarte.h"
 
 void manoPoker( unsigned int wDeck[][FACES], const char *wFace[], const char *wSuit[] )
 {
     /*Prototipo*/
-    void stampaCarte( const char *wFace[], const char *wSuit[] unsigned int mano[][CARTEMANO] );
+    void stampaCarte( const char *wFace[], const char *wSuit[], unsigned int mano[][CARTEMANO] );
     /*Prototipo*/
 
 
@@ -40,8 +41,6 @@ void manoPoker( unsigned int wDeck[][FACES], const char *wFace[], const char *wS
     size_t row;
     size_t column;
     unsigned int mano[2][CARTEMANO] = { {0}, {0} }; /*0 Numero Carta, 1 Seme Carta*/
-    size_t numeroSeme;
-    //unsigned int mano[TIPOCARTA][CARTEMANO]
 
     //Distribuisci ognuna delle carte
     card = 1;
@@ -54,8 +53,8 @@ void manoPoker( unsigned int wDeck[][FACES], const char *wFace[], const char *wS
             do{
                 //Se l'elemento contiene la carta corrente, stampala
                 if( wDeck[ row ][ column ] == card ){
-                   mano[0][card] = column;/*Salva il numero della carta*/
-                   mano[1][card] = row; /*Salva il seme della carta*/
+                   mano[0][card - 1] = column;/*Salva il numero della carta*/
+                   mano[1][card - 1] = row; /*Salva il seme della carta*/
                 }
             column++;
             }while(column < FACES);
@@ -68,14 +67,32 @@ void manoPoker( unsigned int wDeck[][FACES], const char *wFace[], const char *wS
 
     if( pokerScala( mano ) == 1 ){
         puts("Le carte compongono una scala!");
+        stampaCarte( wFace, wSuit, mano );
     }
+    else if(pokerColore( mano ) == 1){
+        puts("Le carte compongono un colore!");
+        stampaCarte( wFace, wSuit, mano );
+    }
+    else if(pokerPoker( mano ) == 1){
+        puts("Le carte compongono un poker!");
+        stampaCarte( wFace, wSuit, mano );
+    }
+    else if(pokerTris( mano ) == 1){
+        puts("Le carte compongono un tris!");
+        stampaCarte( wFace, wSuit, mano );
+    }
+    else{
+        puts("Vafangul!");
+        stampaCarte( wFace, wSuit, mano );
+    }
+
 
 
 
 
 }
 
-void stampaCarte( const char *wFace[], const char *wSuit[] unsigned int mano[][CARTEMANO] )
+void stampaCarte( const char *wFace[], const char *wSuit[], unsigned int mano[][CARTEMANO] )
 {
     unsigned int card;
 
