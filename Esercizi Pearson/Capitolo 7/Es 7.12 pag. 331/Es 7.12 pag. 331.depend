@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1420458995 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\deal.c
+	"globale.h"
+
+1420459152 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\globale.h
+	<stdio.h>
+	<stdlib.h>
+
+1420463946 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\main.c
+	<time.h>
+	"globale.h"
+	"manoPoker.h"
+	"shuffle.h"
+
+1420457210 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\deal.h
+
+1420457103 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\shuffle.h
+
+1420458736 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\shuffle.c
+	"globale.h"
+
+1420467156 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\manopoker.c
+	"globale.h"
+
+1420463787 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\manopoker.h
+
+1420467169 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 6\es 7.12 pag. 331\pokerscala.c
+	"globale.h"
+
