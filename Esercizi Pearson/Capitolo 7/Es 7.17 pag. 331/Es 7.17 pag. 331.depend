@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1420491367 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.17 pag. 331\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
