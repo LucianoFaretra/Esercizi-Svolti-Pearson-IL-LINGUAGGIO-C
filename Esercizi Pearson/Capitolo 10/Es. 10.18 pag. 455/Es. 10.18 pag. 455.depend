@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1420911921 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolobmi.c
+	<stdlib.h>
+	<stdio.h>
+	"calcoloBmi.h"
+
+1420912547 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcoloeta.c
+	"calcoloEta.h"
+
+1420911715 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolofrequenzamassima.c
+	<stdlib.h>
+	<stdio.h>
+	"calcoloFrequenzaMassima.h"
+
+1420911702 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolointervallomassimofrequenza.c
+	<stdlib.h>
+	<stdio.h>
+	"calcoloIntervalloMassimoFrequenza.h"
+
+1420911750 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolointervallominimofrequenza.c
+	<stdlib.h>
+	<stdio.h>
+	"calcoloIntervalloMinimoFrequenza.h"
+
+1420912807 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\controllocorrettezzadata.c
+	<stdlib.h>
+	<stdio.h>
+	"ControlloCorrettezzaData.h"
+	"stampaErrori.h"
+
+1420912465 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\inputdati.c
+	"stampaErrori.h"
+	"globale.h"
+	"inputDati.h"
+
+1420849811 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\stampaerrori.h
+
+1420912363 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\main.c
+	"calcoloBmi.h"
+	"calcoloEta.h"
+	"calcoloFrequenzaMassima.h"
+	"calcoloIntervalloMassimoFrequenza.h"
+	"calcoloIntervalloMinimoFrequenza.h"
+	"ControlloCorrettezzaData.h"
+	"inputDati.h"
+	"stampaErrori.h"
+	"globale.h"
+	"stampaDati.h"
+
+1420913142 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolobmi.h
+
+1420834349 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcoloeta.h
+
+1420834518 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolofrequenzamassima.h
+
+1420833099 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolointervallomassimofrequenza.h
+
+1420833413 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\calcolointervallominimofrequenza.h
+
+1420834969 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\controllocorrettezzadata.h
+
+1420912465 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\inputdati.h
+
+1420909280 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\stampadati.h
+
+1420912494 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\globale.h
+	<stdlib.h>
+	<stdio.h>
+
+1420912944 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\stampadati.c
+	<stdlib.h>
+	<stdio.h>
+	"globale.h"
+	"stampaDati.h"
+
+1420911859 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 10\es. 10.18 pag. 455\stampaerrori.c
+	<stdlib.h>
+	<stdio.h>
+	"stampaErrori.h"
+
