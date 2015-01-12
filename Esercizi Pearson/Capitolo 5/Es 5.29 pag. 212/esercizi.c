@@ -78,17 +78,10 @@ return 0;
 int gcd(int primoNumero, int secondoNumero)
 {
     int temp;
-
-    if( secondoNumero != 0 ){
+    while(secondoNumero != 0){
         temp = primoNumero % secondoNumero;
-        if( temp == 0 ){
-            return secondoNumero;
-        }
-        else{
-            primoNumero = secondoNumero;
-            secondoNumero = temp;
-            gcd(primoNumero, secondoNumero);
-        }
+        primoNumero = secondoNumero;
+        secondoNumero = temp;
     }
 
 return primoNumero;
