@@ -1,0 +1,7 @@
+*** Welcome to Simpletron! ***
+*** Please enter your program one instruction ***
+*** (or data word) at a time. I will type the ***
+*** location number and a question mark (?).  ***
+*** You them type the word for that location. ***
+*** Type the sentinel -99999 to stop entering ***
+*** your program. ***

@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1421965976 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\load.c
+	<stdio.h>
+	<stdlib.h>
+
+1421966858 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\main.c
+	<stdio.h>
+	<stdlib.h>
+	"load.h"
+	"execute.h"
+	"debug.h"
+
+1421959661 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\load.h
+
+1421966881 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\execute.h
+
+1421967333 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\execute.c
+	<stdio.h>
+	<stdlib.h>
+	"debug.h"
+
+1421966881 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\debug.h
+
+1421966894 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.18 pag. 333 simpletron\debug.c
+	<stdio.h>
+	<stdlib.h>
+
