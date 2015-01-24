@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1422051929 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\debug.c
+	<stdio.h>
+	<stdlib.h>
+	"globale.h"
+
+1422055958 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\execute.c
+	<stdio.h>
+	<stdlib.h>
+	"debug.h"
+	<math.h>
+	<string.h>
+
+1422045946 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\debug.h
+
+1422046942 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\load.c
+	<stdio.h>
+	<stdlib.h>
+	"globale.h"
+
+1422053828 source:c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"load.h"
+	"execute.h"
+	"debug.h"
+	"globale.h"
+
+1422045946 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\load.h
+
+1422045946 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\execute.h
+
+1422051929 c:\users\ibanez89.fisso\documents\github\uniba\esercizi pearson\capitolo 7\es 7.29 pag. 343 simpletron plus\globale.h
+

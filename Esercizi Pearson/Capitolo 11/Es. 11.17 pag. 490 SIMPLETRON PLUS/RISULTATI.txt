@@ -1,0 +1,2 @@
+Risultato dell'elaborazione: +6.000000
+*** Simpletron execution terminated ***
