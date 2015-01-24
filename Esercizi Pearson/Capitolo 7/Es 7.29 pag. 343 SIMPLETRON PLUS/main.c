@@ -15,7 +15,10 @@
     ADD 30 //Somma una parola da una specifica locazione in memoria nell'accumulatore (lascia il risultato nell'accumulatore)
     SUBTRACT 31 //Sottrae una parola da una specifica locazione in memoria nell'accumulatore (lascia il risultato nell'accumulatore)
     DIVIDE 32 //Divide una parola da una specifica locazione in memoria nell'accumulatore (lascia il risultato nell'accumulatore)
+    RESTO 52 //Mostra il resto della divisione dell'accumulatore per un numero da una specifica locazione in memoria nell'accumulatore (lascia il risultato nell'accumulatore)
     MULTIPLY 33 //Moltiplica una parola da una specifica locazione in memoria nell'accumulatore (lascia il risultato nell'accumulatore)
+    ELEVA 53 //Eleva a potenza il risultato presente nell'accumulatore (lascia il risultato nell'accumulatore)
+
 
     operazioni di traferimento del controllo
     BRACH 40 //Salta a una specifica locazione di memoria
@@ -23,6 +26,10 @@
     BRANCHZERO 42 // Se l'accumulatore è zero alta a una specifica locazione di memoria
     HALT 43 // Halt, il programma ha completato il suo compito e termina
 
+    manipolazioni caratteri
+    NEWLINE 60  Stampa una newline
+    STRINGW 61 Scrivi una stringa
+    STRINGR 62 Leggi una stringa
 
     -99999 Termina l'inserimento
 
@@ -52,6 +59,7 @@
 #include "load.h"
 #include "execute.h"
 #include "debug.h"
+#include "globale.h"
 
 #define ERRFILE "bootMsg.txt" //Messaggio specifico file mancante
 
@@ -59,16 +67,16 @@ int main( void )
 {
 FILE *bootMsgPtr;
 
-    int memory[100] = {0};
-    char *genericError = "*** Simpletron execution abnormally terminated ***";
-    char *bufferPtr; //buffer lettura
+double memory[SIZERAM] = {0};
+char *genericError = "*** Simpletron execution abnormally terminated ***";
+char *bufferPtr; //buffer lettura
 
-    int accumulator = {0};
-    int instructionCounter = {00};
-    int instructionRegister = {0000};
-    int operationCode = {00};
-    int operand = {00};
-    int debugMode;
+double accumulator = {0};
+int instructionCounter = {00};
+int instructionRegister = {0000};
+int operationCode = {00};
+int operand = {00};
+int debugMode;
 
     if((bootMsgPtr = fopen("bootMsg.txt", "r")) == NULL ){
         puts(genericError);

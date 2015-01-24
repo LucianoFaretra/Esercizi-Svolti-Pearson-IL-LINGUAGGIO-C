@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "debug.h"
 
-int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, int *instructionRegisterPtr, int *operationCodePtr, int *operandPtr )
+int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, int *instructionRegisterPtr, int *operationCodePtr, int *operandPtr, int debugMode )
 {
     unsigned int esitoScanf;
     char *violation = "*** Simpletron execution abnormally terminated ***";
@@ -35,12 +35,22 @@ int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, in
         }
         else if(*operationCodePtr == 30){ //Istruzione ADD
                 *accumulatorPtr += memoryPtr[ *operandPtr ];
+                if(*accumulatorPtr > 9999 || *accumulatorPtr < -9999){
+                    puts(violation);
+                    puts("*** Aritmetic overflow ***");
+                    return 0;
+                }
         }
         else if(*operationCodePtr == 31){ //Istruzione SUBTRACT
                 *accumulatorPtr -= memoryPtr[ *operandPtr ];
+                if(*accumulatorPtr < -9999){
+                    puts(violation);
+                    puts("*** Aritmetic overflow ***");
+                    return 0;
+                }
         }
         else if(*operationCodePtr == 32){ //Istruzione DIVIDE
-                if ( memoryPtr[ *operandPtr ] == 0 || *accumulatorPtr == 0){
+                if ( memoryPtr[ *operandPtr ] == 0 || *accumulatorPtr == 0 ){
                     puts(violation);
                     puts("*** Attempt to divide by zero ***");
                     return 0;
@@ -51,6 +61,11 @@ int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, in
         }
         else if(*operationCodePtr == 33){ //Istruzione MULTIPLY
                 *accumulatorPtr *= memoryPtr[ *operandPtr ];
+                if(*accumulatorPtr > 9999 || *accumulatorPtr < -9999){
+                    puts(violation);
+                    puts("*** Aritmetic overflow ***");
+                    return 0;
+                }
         }
         else if(*operationCodePtr == 40){ //Istruzione BRANCH
                 *instructionCounterPtr = *operandPtr - 1;
@@ -79,8 +94,13 @@ int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, in
             puts(violation);
             return 0;
         }
+
+        /*DEBUG MODE*/
+        if( debugMode == 1 ){
+            debug( memoryPtr, accumulatorPtr, instructionCounterPtr, instructionRegisterPtr, operationCodePtr, operandPtr );
+        }
+        /*DEBUG MODE*/
     ++(*instructionCounterPtr);
-    //debug( memoryPtr, accumulatorPtr, instructionCounterPtr, instructionRegisterPtr, operationCodePtr, operandPtr );
     }
 
 return 1;

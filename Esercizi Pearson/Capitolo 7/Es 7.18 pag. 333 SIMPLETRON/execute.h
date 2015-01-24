@@ -1,1 +1,1 @@
-int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, int *instructionRegisterPtr, int *operationCodePtr, int *operandPtr );
+int execute( int *memoryPtr, int *accumulatorPtr, int *instructionCounterPtr, int *instructionRegisterPtr, int *operationCodePtr, int *operandPtr, int debugMode );

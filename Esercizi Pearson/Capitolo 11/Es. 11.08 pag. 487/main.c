@@ -6,7 +6,7 @@ void tipo2(void);
 int main(void)
 {
 
-    //tipo1();
+    tipo1();
     tipo2();
 
 return 0;
